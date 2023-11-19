@@ -1,13 +1,11 @@
 // pass down header data, footer data etc as props here {header, footer}
-import VideoBackground from "../elements/video";
+import Hero from "../sections/hero/index";
 const PageTemplate = (props: any) => {
   return (
     <>
-      <h2> Seo Component</h2>
+      {/* <h2> Seo Component</h2> */}
 
-      <VideoBackground />
-
-      <p className="font-secondary">
+      {/* <p className="font-secondary">
         {" "}
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
         corporis minus nesciunt numquam incidunt quaerat facilis magnam, iste,
@@ -27,9 +25,14 @@ const PageTemplate = (props: any) => {
         corporis minus nesciunt numquam incidunt quaerat facilis magnam, iste,
         quisquam, assumenda explicabo est! Sint minima adipisci rerum rem a
         quisquam earum?
-      </p>
-      <header>HEADER COMPONENT</header>
-      <main> Use the layout wrapper here</main>
+      </p> */}
+      {/* <header>HEADER COMPONENT</header> */}
+      <main>
+        <header className="absolute z-20 top-10"> I am a header</header>
+        <section className="relative">
+          <Hero />
+        </section>
+      </main>
       <footer>FOOTER COMPONENT</footer>
     </>
   );
