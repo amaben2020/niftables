@@ -1,9 +1,12 @@
 // pass down header data, footer data etc as props here {header, footer}
-
+import VideoBackground from "../elements/video";
 const PageTemplate = (props: any) => {
   return (
     <>
       <h2> Seo Component</h2>
+
+      <VideoBackground />
+
       <p className="font-secondary">
         {" "}
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
