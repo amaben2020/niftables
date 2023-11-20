@@ -49,13 +49,58 @@
 
     @apply bg-gradient-to-r from-blue-500 to-purple-700 text-transparent bg-clip-text;
   }
+
+  .section-container {
+    @apply px-8 lg:px-60 lg:pt-32 bg-black;
+  }
+
+  /* .custom-border {
+    border-top: 1px solid var(--Linear, #3d8bff);
+    border-bottom: 1px solid var(--Linear, #3d8bff);
+    @apply bg-gradient-to-r from-blue-500 to-purple-700 text-transparent bg-clip-text;
+  } */
+
+  .custom-border {
+    position: relative;
+  }
+
+  .custom-border::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--Linear, linear-gradient(90deg, #3d8bff, #ab23ff));
+    z-index: -1;
+  }
+
+  .custom-border::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--Linear, linear-gradient(90deg, #3d8bff, #ab23ff));
+    z-index: -1;
+  }
 }
 
 @layer base {
+  h1 {
+    @apply font-primary text-[32px] md:text-[44px] lg:text-[68px] text-white uppercase custom-shadow text-left leading-[110%];
+  }
+
   h2 {
     @apply font-primary text-[32px] md:text-[44px] lg:text-[68px] text-white uppercase custom-shadow;
   }
 
-  h4 {
+  h3 {
+    @apply text-lg lg:text-[22px] font-bold font-secondary gradient-text text-left custom-border pt-[7px] pb-3;
+  }
+
+  p {
+    @apply font-secondary text-base lg:text-lg text-white;
   }
 }

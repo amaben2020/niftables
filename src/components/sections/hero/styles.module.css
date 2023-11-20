@@ -2,6 +2,20 @@
   position: relative;
   width: 100vw;
   height: 970px;
+
+  /* @apply bg-gradient-to-b from-black via-blue-500 to-purple-700 mix-blend-soft-light lg:bg-none; */
+}
+
+@media only screen and (max-width: 1024px) {
+  .container {
+    background: linear-gradient(
+      175deg,
+      #000 4.29%,
+      #3d8bff 47.39%,
+      #ab23ff 95.05%
+    );
+    mix-blend-mode: soft-light;
+  }
 }
 
 .wrapper {
@@ -14,12 +28,14 @@
 }
 
 .content {
-  position: absolute;
+  /* position: absolute;
   border: 1px solid red;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
-  width: 80%;
+  width: 80%; */
+
+  @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center w-[95%] lg:w-[80%] md:pr-0;
 }

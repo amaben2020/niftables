@@ -1,5 +1,7 @@
 // pass down header data, footer data etc as props here {header, footer}
+import Header from "../sections/header";
 import Hero from "../sections/hero/index";
+import TwoColumns from "../sections/two-columns";
 const PageTemplate = (props: any) => {
   return (
     <>
@@ -28,9 +30,12 @@ const PageTemplate = (props: any) => {
       </p> */}
       {/* <header>HEADER COMPONENT</header> */}
       <main>
-        <header className="absolute z-20 top-10"> I am a header</header>
+        {/* <header className="absolute z-20 top-10"> I am a header</header> */}
+        <Header />
         <section className="relative">
           <Hero />
+
+          <TwoColumns />
         </section>
       </main>
       <footer>FOOTER COMPONENT</footer>
