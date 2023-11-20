@@ -2,10 +2,11 @@
 import Button from "@/components/elements/button";
 import IconComponent from "@/components/elements/icon";
 import LinkPrimary from "@/components/elements/links/primary";
+import { useOnClickOutside } from "@/hooks/useClickOutside";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import clsx from "clsx";
 import Link from "next/link";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import MobileHeader from "./mobile/MobileHeader";
 import { headerData } from "./mocks/data";
 
@@ -15,9 +16,23 @@ const Header = () => {
 
   const isMobile = useMediaQuery(1024);
 
+  const ref = useRef(null);
+
+  const handleClickOutside = () => {
+    setIsOpen(false);
+  };
+
+  useOnClickOutside(ref, handleClickOutside);
+
   return (
-    <header className="absolute z-20 top-10">
+    <header className="absolute z-20 top-10" ref={ref}>
       <div className="px-[15px] md:px-[30px] lg:px-14 flex justify-between items-center w-[100vw]">
+        {isOpen && (
+          <div
+            className="fixed inset-0 bg-black bg-opacity-60 z-10"
+            onClick={() => setIsOpen(false)}
+          ></div>
+        )}
         <div>
           <IconComponent name="logo" />
         </div>
