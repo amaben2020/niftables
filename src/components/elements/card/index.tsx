@@ -8,7 +8,7 @@ const Card = () => {
     <div
       className={clsx(
         styles["card-zoom"],
-        "rounded-md max-w-[450px] bg-[#13171D99] pt-5 pb-7 relative",
+        "rounded-md max-w-[450px] bg-black-secondary pt-5 pb-7 relative",
       )}
     >
       <div className="pt-4 px-6 pb-12 flex flex-col gap-y-5">
@@ -18,7 +18,7 @@ const Card = () => {
         </p>
       </div>
 
-      <div className="relative max-w-[423px] hover:scale-110 transition duration-500 cursor-pointer object-cover overflow-hidden">
+      <div className="relative max-w-[423px] overflow-hidden">
         <Image
           src={alienImage}
           width={423}
