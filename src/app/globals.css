@@ -45,7 +45,7 @@
   }
 
   .section-container {
-    @apply px-5 lg:px-40 lg:pt-20 bg-black;
+    @apply px-5 lg:px-10 2xl:px-40 py-10 lg:py-20 bg-black;
   }
 
   .custom-border {
@@ -86,6 +86,10 @@
 
   h3 {
     @apply text-lg lg:text-[22px] font-bold font-secondary gradient-text text-left custom-border pt-[7px] pb-3;
+  }
+
+  .sub-title {
+    @apply font-primary text-[22px] sm:text-[28px] leading-[110%] uppercase;
   }
 
   p {

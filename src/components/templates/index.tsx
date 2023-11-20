@@ -5,36 +5,12 @@ import TwoColumns from "../sections/two-columns";
 const PageTemplate = (props: any) => {
   return (
     <>
-      {/* <h2> Seo Component</h2> */}
-
-      {/* <p className="font-secondary">
-        {" "}
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-        corporis minus nesciunt numquam incidunt quaerat facilis magnam, iste,
-        quisquam, assumenda explicabo est! Sint minima adipisci rerum rem a
-        quisquam earum?
-      </p>
-      <p className="font-secondary-bold">
-        {" "}
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-        corporis minus nesciunt numquam incidunt quaerat facilis magnam, iste,
-        quisquam, assumenda explicabo est! Sint minima adipisci rerum rem a
-        quisquam earum?
-      </p>
-      <p className="font-primary">
-        {" "}
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-        corporis minus nesciunt numquam incidunt quaerat facilis magnam, iste,
-        quisquam, assumenda explicabo est! Sint minima adipisci rerum rem a
-        quisquam earum?
-      </p> */}
-      {/* <header>HEADER COMPONENT</header> */}
       <main className="flex">
-        {/* <header className="absolute z-20 top-10"> I am a header</header> */}
         <Header />
         <section className="relative">
           <Hero />
-          <TwoColumns />
+          <TwoColumns variant="1" />
+          <TwoColumns variant="2" />
         </section>
       </main>
       <footer>FOOTER COMPONENT</footer>
