@@ -36,6 +36,10 @@
       0px 4px 4px rgba(0, 0, 0, 0.25);
   }
 
+  .border-main {
+    @apply border-custom-main border-b;
+  }
+
   .gradient-text {
     @apply bg-gradient-to-r from-blue-500 to-purple-700 text-transparent bg-clip-text;
   }

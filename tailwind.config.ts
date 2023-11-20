@@ -19,6 +19,10 @@ const config: Config = {
         secondary: ["Satoshi"],
         sans: ["MonumentExtended", "sans-serif"],
       },
+
+      borderColor: {
+        "custom-main": "#13171d",
+      },
     },
   },
   plugins: [],
