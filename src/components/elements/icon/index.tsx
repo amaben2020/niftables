@@ -1,5 +1,5 @@
-import HamburgerOpen from "@/assets/svgs/Svg/HamburgerOpen";
-import Logo from "@/assets/svgs/Svg/Logo";
+import HamburgerOpen from "../../../assets/svgs/Svg/HamburgerOpen";
+import Logo from "../../../assets/svgs/Svg/Logo";
 
 type TIconComponent = {
   name: "hamburger" | "logo";
