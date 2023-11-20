@@ -1,0 +1,10 @@
+.card-zoom {
+  @apply overflow-visible;
+}
+.card-zoom-image {
+  @apply transition-all duration-500 ease-in-out transform bg-center bg-cover;
+}
+
+.card-zoom:hover .card-zoom-image {
+  @apply scale-125;
+}
