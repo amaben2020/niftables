@@ -86,7 +86,7 @@
   }
 
   h3 {
-    @apply text-lg lg:text-[22px] font-bold font-secondary gradient-text text-left custom-border pt-[7px] pb-3;
+    @apply text-lg lg:text-[22px] font-bold font-secondary gradient-text text-left  pt-[7px] pb-3;
   }
 
   .sub-title {

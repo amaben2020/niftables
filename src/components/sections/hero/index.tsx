@@ -23,11 +23,11 @@ const Hero = () => {
 
         <div className="w-[66%] lg:w-[656px] pt-5 lg:pt-12">
           {!isMobile ? (
-            <h3>
+            <h3 className="custom-border">
               Hold the Creon Pass NFT and earn passive income from AI Tools{" "}
             </h3>
           ) : (
-            <h3>
+            <h3 className="custom-border">
               {" "}
               Creon «Create On» confidential AI Tools for granting access
               through NFTs.{" "}
