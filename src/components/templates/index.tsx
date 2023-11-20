@@ -1,4 +1,5 @@
 // pass down header data, footer data etc as props here {header, footer}
+import CardsSection from "../sections/cards";
 import Header from "../sections/header";
 import Hero from "../sections/hero/index";
 import TwoColumns from "../sections/two-columns";
@@ -12,6 +13,7 @@ const PageTemplate = (props: any) => {
           <TwoColumns variant="1" />
           <TwoColumns variant="2" />
           <TwoColumns variant="3" />
+          <CardsSection />
 
           {/* {TWO_COLUMN_VARIANTS.map((variant: "1" | "2" | "3") => (
             <TwoColumns variant={variant} key={variant} />
