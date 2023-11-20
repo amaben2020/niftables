@@ -7,10 +7,10 @@ const LinkPrimary = ({
   text,
   to,
 }: {
-  variant: any;
+  variant: "fill" | "outline";
   text: string;
   to: string;
-  className: string;
+  className?: string;
 }) => {
   return (
     <Link href={to}>

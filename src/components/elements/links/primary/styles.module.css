@@ -8,7 +8,7 @@
   border-radius: 6px;
   overflow: hidden;
   position: relative;
-  @apply font-secondary text-base lg:text-lg text-white;
+  @apply font-secondary text-base lg:text-lg text-white cursor-default;
 }
 
 .btn[data-variant="outline"] {
@@ -16,6 +16,14 @@
 }
 .btn:hover {
   border: none;
+}
+
+.btn[data-variant="fill"] {
+  display: flex;
+  min-width: 231px;
+  padding: 20px 56px;
+  border-radius: 6px;
+  background: var(--Linear, linear-gradient(90deg, #3d8bff 0%, #ab23ff 100%));
 }
 
 .btn.next::after {
@@ -27,8 +35,13 @@
   transition: all 400ms;
   top: 2px;
 }
+
+.btn.next[data-variant="fill"]::before {
+  background: var(--Linear, linear-gradient(90deg, #3d8bff 0%, #3d8bff 100%));
+}
+
 .btn.next::before {
-  background: #0994f7;
+  background: #3d8bff;
   content: attr(data-text);
   position: absolute;
   text-align: center;

@@ -29,12 +29,11 @@ const PageTemplate = (props: any) => {
         quisquam earum?
       </p> */}
       {/* <header>HEADER COMPONENT</header> */}
-      <main>
+      <main className="flex">
         {/* <header className="absolute z-20 top-10"> I am a header</header> */}
         <Header />
         <section className="relative">
           <Hero />
-
           <TwoColumns />
         </section>
       </main>
