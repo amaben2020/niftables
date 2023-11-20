@@ -11,6 +11,11 @@ const PageTemplate = (props: any) => {
           <Hero />
           <TwoColumns variant="1" />
           <TwoColumns variant="2" />
+          <TwoColumns variant="3" />
+
+          {/* {TWO_COLUMN_VARIANTS.map((variant: "1" | "2" | "3") => (
+            <TwoColumns variant={variant} key={variant} />
+          ))} */}
         </section>
       </main>
       <footer>FOOTER COMPONENT</footer>

@@ -45,15 +45,16 @@
   }
 
   .section-container {
-    @apply px-5 lg:px-10 2xl:px-40 py-10 lg:py-20 bg-black;
+    @apply px-5 lg:px-10 2xl:px-40 py-20   bg-black;
   }
 
   .custom-border {
-    position: relative;
+    @apply relative;
   }
 
   .custom-border::before {
     content: "";
+
     position: absolute;
     top: 0;
     left: 0;

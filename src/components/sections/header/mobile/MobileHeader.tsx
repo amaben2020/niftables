@@ -1,6 +1,7 @@
 import clsx from "clsx";
 
 const MobileHeader = ({ isOpen }: { isOpen: boolean }) => {
+  // TODO: add click-outside
   return (
     <div
       id="menu"
