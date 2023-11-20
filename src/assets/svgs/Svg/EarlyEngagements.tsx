@@ -1,4 +1,4 @@
-const EarlyEngagements = ({ fill = "none", ...props }: { fill: string }) => {
+const EarlyEngagements = ({ fill = "none", ...props }: { fill?: string }) => {
   return (
     <svg
       width="73"

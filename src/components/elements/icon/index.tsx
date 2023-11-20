@@ -19,7 +19,7 @@ type TIconComponent = {
     | "telegram"
     | "twitter"
     | "transparent";
-  fill: string;
+  fill?: string;
 };
 
 const IconComponent = ({ name, fill }: TIconComponent) => {

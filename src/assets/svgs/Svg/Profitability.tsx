@@ -1,4 +1,4 @@
-const Profitability = ({ fill = "none", ...props }: { fill: string }) => {
+const Profitability = ({ fill = "none", ...props }: { fill?: string }) => {
   return (
     <svg
       width="73"

@@ -1,4 +1,4 @@
-const LimitlessCrypto = ({ fill = "none", ...props }: { fill: string }) => {
+const LimitlessCrypto = ({ fill = "none", ...props }: { fill?: string }) => {
   return (
     <svg
       {...props}

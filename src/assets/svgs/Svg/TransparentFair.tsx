@@ -1,6 +1,7 @@
-const TransparentFair = ({ fill = "none", ...props }: { fill: string }) => {
+const TransparentFair = ({ fill = "none", ...props }: { fill?: string }) => {
   return (
     <svg
+      {...props}
       width="73"
       height="83"
       viewBox="0 0 73 83"
