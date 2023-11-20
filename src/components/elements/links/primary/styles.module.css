@@ -1,0 +1,67 @@
+/* .btn {
+  display: inline-block;
+  text-decoration: none;
+  width: 160px;
+  height: 42px;
+  margin: 24px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: inset 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+} */
+
+.btn {
+  display: flex;
+  width: 110px;
+  /* height: 38px; */
+  padding: 20px 23px 16px 23px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  @apply font-secondary text-base lg:text-lg text-white;
+}
+
+.btn[data-variant="outline"] {
+  border: 2px solid var(--White, #fff);
+}
+.btn:hover {
+  border: none;
+}
+
+.btn.next::after {
+  content: "Connect";
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  color: #fff;
+
+  transition: all 400ms;
+  top: 0;
+}
+.btn.next::before {
+  background: #e63946;
+  content: "Connect";
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  transition: all 400ms;
+  top: 0px;
+}
+
+.btn.btn.next:hover::after {
+  top: -36px;
+}
+
+.btn.next::before {
+  content: "Connect";
+  top: 42px;
+  height: 100%;
+}
+
+.btn.btn.next:hover::before {
+  top: 0px;
+}
