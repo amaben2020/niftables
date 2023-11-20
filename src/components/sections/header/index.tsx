@@ -2,6 +2,7 @@
 import Button from "@/components/elements/button";
 import IconComponent from "@/components/elements/icon";
 import LinkPrimary from "@/components/elements/links/primary";
+import useMediaQuery from "@/hooks/useMediaQuery";
 import Link from "next/link";
 import { useState } from "react";
 import MobileHeader from "./mobile/MobileHeader";
@@ -9,6 +10,8 @@ import MobileHeader from "./mobile/MobileHeader";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const handleHeaderOpen = () => setIsOpen((p) => !p);
+
+  const isMobile = useMediaQuery(1024);
   return (
     <header className="absolute z-20 top-10">
       <div className="px-[15px] md:px-[30px] lg:px-14 flex justify-between items-center w-[100vw]">
@@ -23,7 +26,20 @@ const Header = () => {
             <p className=" hover:text-blue-500 cursor-default">About </p>
           </Link>
         </div>{" "}
-        <Button variant="outline" text="Connect" className="ml-auto lg:ml-16" />
+        {isMobile ? (
+          <Button
+            variant="outline"
+            text="Connect"
+            className="ml-auto lg:ml-16"
+          />
+        ) : (
+          <LinkPrimary
+            variant="outline"
+            text="Connect"
+            className="ml-auto lg:ml-16"
+            to="#"
+          />
+        )}
         <button
           onClick={handleHeaderOpen}
           id="menu-toggle"
@@ -32,8 +48,6 @@ const Header = () => {
           <IconComponent name="hamburger" />
         </button>
       </div>
-
-      <LinkPrimary variant="outline" />
 
       <MobileHeader isOpen={isOpen} />
     </header>
