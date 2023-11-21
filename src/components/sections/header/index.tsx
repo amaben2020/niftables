@@ -12,7 +12,7 @@ import { headerData } from "./mocks/data";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const handleHeaderOpen = () => setIsOpen((p) => !p);
+  const handleMenuOpen = () => setIsOpen((p) => !p);
 
   const isMobile = useMediaQuery(1024);
 
@@ -72,7 +72,7 @@ const Header = () => {
           />
         )}
         <button
-          onClick={handleHeaderOpen}
+          onClick={handleMenuOpen}
           id="menu-toggle"
           className="lg:hidden focus:outline-none ml-5"
         >
@@ -80,7 +80,7 @@ const Header = () => {
         </button>
       </div>
 
-      <MobileHeader isOpen={isOpen} />
+      <MobileHeader handleIsOpen={handleMenuOpen} isOpen={isOpen} />
     </header>
   );
 };

@@ -5,13 +5,20 @@ import SocialIcons from "@/components/elements/social-icons";
 import { socialLinks } from "@/components/elements/social-icons/mocks/data";
 import clsx from "clsx";
 
-const MobileHeader = ({ isOpen }: { isOpen: boolean }) => {
+const MobileHeader = ({
+  isOpen,
+  handleIsOpen,
+}: {
+  isOpen: boolean;
+  handleIsOpen: () => void;
+}) => {
   return (
     <div
       id="menu"
+      onClick={handleIsOpen}
       className={clsx(
         isOpen ? "flex  animate-openmenu" : "hidden",
-        "ml-auto fixed w-[62%] inset-0 bg-black z-50 right-0 pl-10 py-5 animate-closemenu md:hidden block",
+        "ml-auto fixed w-[62%] inset-0 bg-black z-50 right-0 pl-10 py-5 animate-closemenu lg:hidden block",
       )}
     >
       <div className="flex flex-col w-full">
