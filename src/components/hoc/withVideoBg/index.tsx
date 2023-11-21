@@ -10,7 +10,7 @@ const withVideoBg =
     variant,
   }: {
     gradient?: boolean;
-    variant?: "hero" | "cards";
+    variant?: "hero" | "cards" | "horizontal";
   }) => {
     const isTablet = useMediaQuery(1024);
 
@@ -18,6 +18,8 @@ const withVideoBg =
       variant === "cards" && isTablet
         ? videoSrc
         : variant === "hero"
+        ? videoSrc
+        : variant === "horizontal"
         ? videoSrc
         : "";
 
@@ -27,10 +29,7 @@ const withVideoBg =
       setRenderVideo(renderVideoSource);
     }, [renderVideoSource]);
     return (
-      <div
-        className={styles.container}
-        data-variant={String(variant === "cards")}
-      >
+      <div className={styles.container} data-variant={String(variant)}>
         {renderVideo.length ? (
           <video autoPlay loop muted className={styles.wrapper}>
             <source src={videoSrc} type="video/mp4" />

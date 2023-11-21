@@ -13,6 +13,11 @@ const PageTemplate = () => {
     CardsSection,
     "/horizontal-cards-bg.mp4",
   );
+
+  const HorizontalCardWithVideoBg = withVideoBg(
+    HorizontalCards,
+    "/horizontal-cards-bg.mp4",
+  );
   return (
     <>
       <main className="flex">
@@ -23,7 +28,7 @@ const PageTemplate = () => {
           <TwoColumns variant="2" />
           <TwoColumns variant="3" />
           <CardsSectionWithVideoBg variant="cards" />
-          <HorizontalCards />
+          <HorizontalCardWithVideoBg variant="horizontal" />
         </section>
       </main>
       <Footer />

@@ -4,7 +4,7 @@
   height: 970px;
 }
 
-.container[data-variant] {
+.container[data-variant="cards"] {
   background: black;
 }
 
@@ -17,6 +17,12 @@
       #ab23ff 95.05%
     );
     mix-blend-mode: soft-light;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .container[data-variant="horizontal"] {
+    background: rgba(19, 23, 29, 1);
   }
 }
 
