@@ -11,6 +11,7 @@ import Profitability from "@/assets/svgs/Svg/Profitability";
 import Telegram from "@/assets/svgs/Svg/Telegram";
 import TransparentFair from "@/assets/svgs/Svg/TransparentFair";
 import Twitter from "@/assets/svgs/Svg/Twitter";
+import { HTMLAttributes } from "react";
 
 export type TIconComponent = {
   name:
@@ -30,7 +31,11 @@ export type TIconComponent = {
   fill?: boolean;
 };
 
-const IconComponent = ({ name, fill, ...rest }: TIconComponent) => {
+const IconComponent = ({
+  name,
+  fill,
+  ...rest
+}: TIconComponent & HTMLAttributes<SVGElement>) => {
   if (process.env.NODE_ENV === "development") {
     if (!name.length) console.log("Insert an icon name");
   }

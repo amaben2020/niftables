@@ -45,7 +45,7 @@
   }
 
   .section-container {
-    @apply px-5 lg:px-10 2xl:px-40 py-20   bg-black;
+    @apply px-5 lg:px-10 2xl:px-40 py-16   bg-black;
   }
 
   .custom-border {

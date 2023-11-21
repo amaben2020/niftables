@@ -1,13 +1,14 @@
 import alienImage from "@/assets/images/alien-tomb.png";
+import { accordionData } from "@/components/accordion/mocks/data";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import Image from "next/image";
-import Accordion from "../../accordion";
+import Accordion from "../../../accordion";
 const ColumnVariant3 = () => {
   const isTablet = useMediaQuery(1024);
 
   return (
     <div className="grid grid-cols-2 relative gap-x-5 lg:gap-x-10 min-h-[100vh] lg:min-h-[90vh]">
-      <div className="col-span-1 z-10">
+      <div className=" col-span-2 md:col-span-1 z-10">
         {!isTablet ? (
           <h3 className="font-primary text-4xl leading-[120%] uppercase z-10 break-words">
             <span className="text-white">
@@ -26,8 +27,15 @@ const ColumnVariant3 = () => {
         )}
       </div>
 
-      <div className="col-span-1 z-10">
-        <Accordion />
+      <div className="col-span-2 md:col-span-1 z-10">
+        {accordionData.map((item) => (
+          <Accordion
+            title={item.title}
+            content={item.content}
+            icon={item.icon as any}
+            key={item.id}
+          />
+        ))}
       </div>
       {/* 
       <div className="absolute bottom-0 left-[10%]">

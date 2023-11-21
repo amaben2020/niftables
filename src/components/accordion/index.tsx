@@ -1,17 +1,18 @@
 import IconComponent from "@/components/elements/icon";
 import { useState } from "react";
-const Accordion = ({ title = " ", content = "" }) => {
+
+type TAccordion = {
+  title: string;
+  content: string;
+  icon: "transparent" | "profitability" | "engagement" | "limitless";
+};
+
+const Accordion = ({ title, content, icon }: TAccordion) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
   };
-
-  {
-    /* <IconComponent name="engagement" fill={true} />
-          <IconComponent name="transparent" fill={true} />
-          <IconComponent name="limitless" fill={true} className=" h-28 w-28" /> */
-  }
 
   return (
     <div className="border-b border-custom-main py-8 w-full lg:max-w-[552px] relative ">
@@ -19,11 +20,7 @@ const Accordion = ({ title = " ", content = "" }) => {
         className="flex items-center justify-between cursor-pointer transition-all duration-300 ease-in-out gap-5 "
         onClick={handleToggle}
       >
-        <IconComponent
-          name="profitability"
-          fill={isOpen}
-          className="w-28 h-32 mr-5"
-        />
+        <IconComponent name={icon} fill={isOpen} className="w-28 h-32 mr-5" />
 
         <p className="text-lg lg:text-[22px] font-bold font-secondary text-left break-words lg:max-w-[336px] mr-auto hover:text-blue-base">
           {title} Profitability and Growth{" "}
