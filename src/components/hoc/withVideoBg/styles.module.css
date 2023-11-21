@@ -4,6 +4,10 @@
   height: 970px;
 }
 
+.container[data-variant="horizontal"] {
+  height: auto;
+}
+
 .container[data-variant="cards"] {
   background: black;
 }

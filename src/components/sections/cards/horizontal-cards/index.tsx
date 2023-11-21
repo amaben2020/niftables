@@ -4,7 +4,7 @@ import { horizontalCardsData } from "./mocks/data";
 const HorizontalCards = () => {
   return (
     <SectionContainer>
-      <div className="flex flex-col gap-y-5 mb-20">
+      <div className="flex flex-col gap-y-5">
         {horizontalCardsData.map((item) => (
           <HorizontalCard
             key={item.id}
