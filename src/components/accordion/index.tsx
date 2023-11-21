@@ -22,7 +22,7 @@ const Accordion = ({ title, content, icon }: TAccordion) => {
       >
         <IconComponent name={icon} fill={isOpen} className="w-28 h-32" />
 
-        <p className="text-lg lg:text-[22px] font-bold font-secondary text-left break-words max-w-[280px]  md:max-w-[336px] mr-auto hover:text-blue-base ml-8">
+        <p className="text-lg lg:text-[22px] font-bold font-secondary text-left break-words   mr-auto hover:text-blue-base ml-8">
           {title}
         </p>
         <div className="absolute right-0">
