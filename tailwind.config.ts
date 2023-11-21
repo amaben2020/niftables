@@ -48,6 +48,7 @@ const config: Config = {
 
       colors: {
         "blue-base": "#3D8BFF",
+        "pink-base": "#AB23FF",
       },
     },
   },

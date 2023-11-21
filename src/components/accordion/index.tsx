@@ -15,12 +15,12 @@ const Accordion = ({ title, content, icon }: TAccordion) => {
   };
 
   return (
-    <div className="border-b border-custom-main py-8 w-full lg:max-w-[552px] relative ">
+    <div className="border-b border-custom-main py-8 w-full lg:max-w-[552px] relative">
       <button
         className="flex items-center justify-between cursor-pointer transition-all duration-300 ease-in-out"
         onClick={handleToggle}
       >
-        <IconComponent name={icon} fill={isOpen} className="w-28 h-32 " />
+        <IconComponent name={icon} fill={isOpen} className="w-28 h-32" />
 
         <p className="text-lg lg:text-[22px] font-bold font-secondary text-left break-words lg:max-w-[336px] mr-auto hover:text-blue-base ml-8">
           {title}
@@ -36,7 +36,7 @@ const Accordion = ({ title, content, icon }: TAccordion) => {
         </div>
       </button>
       {isOpen && (
-        <p className="mt-2 overflow-hidden overflow-y-scroll max-h-32 transition-all duration-500 ease-in  w-3/4 ml-auto">
+        <p className="mt-2 overflow-hidden overflow-y-scroll max-h-32 transition-all duration-500 ease-in w-3/4 ml-auto">
           {content}
         </p>
       )}

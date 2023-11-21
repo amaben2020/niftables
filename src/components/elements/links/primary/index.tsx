@@ -15,7 +15,7 @@ const LinkPrimary = ({
   return (
     <Link href={to}>
       <p
-        className={clsx(styles.btn, styles.next, className)}
+        className={clsx(styles.link, styles.next, className)}
         data-variant={variant}
         data-text={text}
       ></p>

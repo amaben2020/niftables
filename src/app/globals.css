@@ -54,12 +54,7 @@
 
   .custom-border::before {
     content: "";
-
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
+    @apply absolute top-0 left-0 w-full h-[1px];
     background: var(--Linear, linear-gradient(90deg, #3d8bff, #ab23ff));
     z-index: -1;
   }

@@ -1,59 +1,49 @@
-.btn {
+.link {
   /* display and visibility */
   @apply flex w-[110px] h-[38px] py-[9px] px-[23px] justify-center items-center rounded-md overflow-hidden relative;
   /* typography */
   @apply font-secondary text-base lg:text-lg text-white cursor-default;
 }
 
-.btn[data-variant="outline"] {
+.link[data-variant="outline"] {
   @apply border-2 border-white;
 }
-.btn:hover {
+.link:hover {
   border: none;
 }
 
-.btn[data-variant="fill"] {
-  @apply flex   w-full   md:w-[231px] py-5 px-14 rounded-md;
+.link[data-variant="fill"] {
+  @apply flex w-full md:w-[231px] lg:w-[453px] py-5 px-14 rounded-md;
   background: var(--Linear, linear-gradient(90deg, #3d8bff 0%, #ab23ff 100%));
 }
 
-.btn.next::after {
+.link.next::after {
   content: attr(data-text);
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  color: #fff;
+
+  @apply absolute text-center w-full text-white top-[2px];
   transition: all 400ms;
-  top: 2px;
 }
 
-.btn.next[data-variant="fill"]::before {
+.link.next[data-variant="fill"]::before {
   background: var(--Linear, linear-gradient(90deg, #3d8bff 0%, #3d8bff 100%));
 }
 
-.btn.next::before {
-  @apply bg-blue-base;
-
+.link.next::before {
+  @apply bg-blue-base absolute text-center h-full w-full text-white top-0;
   content: attr(data-text);
-  position: absolute;
-  text-align: center;
-  width: 100%;
-  height: 100%;
-  color: #fff;
   transition: all 400ms;
-  top: 0px;
 }
 
-.btn.btn.next:hover::after {
+.link.link.next:hover::after {
   top: -36px;
 }
 
-.btn.next::before {
+.link.next::before {
   content: attr(data-text);
   top: 40px;
   height: 100%;
 }
 
-.btn.btn.next:hover::before {
+.link.link.next:hover::before {
   top: 0px;
 }

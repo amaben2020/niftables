@@ -26,7 +26,7 @@ const Header = () => {
 
   return (
     <header className="absolute z-20 top-10" ref={ref}>
-      <div className="px-[15px] md:px-[30px] lg:px-14 flex justify-between items-center w-[100vw]">
+      <div className="px-[15px] md:px-8 lg:px-14 flex justify-between items-center w-[100vw]">
         {isOpen && (
           <div
             className="fixed inset-0 bg-black bg-opacity-60 z-10"
@@ -40,7 +40,7 @@ const Header = () => {
           {headerData.map((data) =>
             data.isAvailable ? (
               <Link href={data.url} key={data.id}>
-                <p className=" hover:text-blue-500 cursor-default">
+                <p className="hover:text-blue-base cursor-default">
                   {data.title}{" "}
                 </p>
               </Link>
@@ -50,7 +50,7 @@ const Header = () => {
                   {data.title}
                 </p>
 
-                <span className="text-[#AB23FF] px-1 pt-0.5 pb-[1px] bg-black  absolute -right-11 rounded-[100px] -top-0.5 text-xs font-bold">
+                <span className="text-pink-base px-1 pt-0.5 pb-[1px] bg-black  absolute -right-11 rounded-[100px] -top-0.5 text-xs font-bold">
                   Soon
                 </span>
               </Link>

@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <>
       {isMobile ? (
-        <h1 className="pr-[200px] md:pr-0">
+        <h1 className="md:pr-[200px]">
           Empowering AI-Crypto Innovations and Integrating AI Tools into crypto.
         </h1>
       ) : (
@@ -14,7 +14,7 @@ const Hero = () => {
         </h1>
       )}
 
-      <div className="w-[66%] lg:w-[656px] pt-5 lg:pt-12">
+      <div className="w-full md:w-[73%] lg:w-[656px] pt-5 lg:pt-12">
         {!isMobile ? (
           <h3 className="custom-border">
             Hold the Creon Pass NFT and earn passive income from AI Tools{" "}
