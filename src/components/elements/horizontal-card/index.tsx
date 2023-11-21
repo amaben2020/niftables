@@ -1,9 +1,9 @@
+import img from "@/assets/images/ai-cloud-concept-with-robot-head 1.png";
 import CustomImageWithOpacity from "../custom-image/image";
-import img from "./../../../../src/assets/images/ai-cloud-concept-with-robot-head 1.png";
 const HorizontalCard = () => {
   return (
-    <div className="lg:h-[302px] min-w-full bg-black-tertiary grid md:grid-cols-3">
-      <div className=" px-[24px] md:px-[40px] py-10 col-span-3 md:col-span-2 md:order-1 order-2">
+    <div className="min-h-[302px] max-h-0 lg:max-h-[302px] min-w-full bg-black-tertiary grid md:grid-cols-3">
+      <div className=" px-[24px] md:px-[40px] py-6 lg:py-10 col-span-3 md:col-span-2 md:order-1 order-2">
         <h3 className="font-primary text-white text-3xl md:text-4xl uppercase">
           AI Prospects, Market Size, and Development Pace
         </h3>
@@ -17,12 +17,13 @@ const HorizontalCard = () => {
           sectors such as healthcare, finance, and transportation.
         </p>
       </div>
-      <div className="col-span-3 md:col-span-1 md:order-2 order-1 ">
+      <div className="col-span-3 md:col-span-1 md:order-2 order-1 min-w-full min-h-full">
         <CustomImageWithOpacity
           image={img}
           width={453}
           height={301}
-          className="min-w-full md:max-w-[453px] max-h-[302px]"
+          className="min-w-full  lg:max-h-[302px]"
+          // className="min-w-full md:max-w-[453px] max-h-[302px]"
         />
       </div>
     </div>
