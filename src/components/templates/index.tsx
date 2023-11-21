@@ -2,6 +2,7 @@
 
 import withVideoBg from "../hoc/withVideoBg";
 import CardsSection from "../sections/cards";
+import HorizontalCards from "../sections/cards/horizontal-cards";
 import Footer from "../sections/footer";
 import Header from "../sections/header";
 import Hero from "../sections/hero/index";
@@ -22,6 +23,7 @@ const PageTemplate = () => {
           <TwoColumns variant="2" />
           <TwoColumns variant="3" />
           <CardsSectionWithVideoBg variant="cards" />
+          <HorizontalCards />
         </section>
       </main>
       <Footer />
