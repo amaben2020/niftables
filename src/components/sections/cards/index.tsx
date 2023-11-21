@@ -5,7 +5,7 @@ import { cardsData } from "./mocks/data";
 const CardsSection = () => {
   return (
     <SectionContainer className="overflow-x-auto whitespace-no-wrap">
-      <div className="flex gap-x-5 2xl:gap-x-10 max-w-[90vw] justify-start xl:justify-center mx-auto">
+      <div className="flex gap-x-5 2xl:gap-x-10 max-w-[90vw] justify-start xl:justify-center mx-auto ">
         {cardsData.map(({ title, id, description, subtitle, image }) => (
           <Card
             key={id}
