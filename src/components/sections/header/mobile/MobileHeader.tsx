@@ -1,6 +1,8 @@
 import Button from "@/components/elements/button";
 import IconComponent from "@/components/elements/icon";
 import LinkPrimary from "@/components/elements/links/primary";
+import SocialIcons from "@/components/elements/social-icons";
+import { socialLinks } from "@/components/elements/social-icons/mocks/data";
 import clsx from "clsx";
 
 const MobileHeader = ({ isOpen }: { isOpen: boolean }) => {
@@ -9,13 +11,13 @@ const MobileHeader = ({ isOpen }: { isOpen: boolean }) => {
       id="menu"
       className={clsx(
         isOpen ? "flex  animate-openmenu" : "hidden",
-        "ml-auto fixed w-[60%] inset-0 bg-black z-50 right-0 pl-10 py-5 animate-closemenu  ",
+        "ml-auto fixed w-[62%] inset-0 bg-black z-50 right-0 pl-10 py-5 animate-closemenu md:hidden block",
       )}
     >
       <div className="flex flex-col w-full">
         <div className="flex items-center mb-8">
           <LinkPrimary variant="outline" text="Connect" to="#" />
-          <Button className="ml-2">
+          <Button className="ml-1">
             <IconComponent name="hamburgerClose" />
           </Button>
         </div>
@@ -46,9 +48,8 @@ const MobileHeader = ({ isOpen }: { isOpen: boolean }) => {
             AL Launchpad
           </a>
         </div>
-
-        <div>
-          <p> SOCIALS</p>
+        <div className="mt-auto mb-3">
+          <SocialIcons links={socialLinks} />
         </div>
       </div>
     </div>
