@@ -25,6 +25,7 @@ const config: Config = {
       },
       backgroundColor: {
         "black-secondary": "#13171D99",
+        "black-tertiary": "rgba(19, 23, 29, 0.60)",
       },
     },
   },
