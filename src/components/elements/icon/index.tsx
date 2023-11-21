@@ -3,12 +3,13 @@ import EarlyEngagements from "@/assets/svgs/Svg/EarlyEngagements";
 import HamburgerOpen from "@/assets/svgs/Svg/HamburgerOpen";
 import LimitlessCrypto from "@/assets/svgs/Svg/LimitlessCrypto";
 import Logo from "@/assets/svgs/Svg/Logo";
+import Niftables from "@/assets/svgs/Svg/Niftables";
 import Profitability from "@/assets/svgs/Svg/Profitability";
 import Telegram from "@/assets/svgs/Svg/Telegram";
 import TransparentFair from "@/assets/svgs/Svg/TransparentFair";
 import Twitter from "@/assets/svgs/Svg/Twitter";
 
-type TIconComponent = {
+export type TIconComponent = {
   name:
     | "hamburger"
     | "logo"
@@ -18,7 +19,8 @@ type TIconComponent = {
     | "profitability"
     | "telegram"
     | "twitter"
-    | "transparent";
+    | "transparent"
+    | "niftables";
   fill?: string;
 };
 
@@ -36,6 +38,7 @@ const IconComponent = ({ name, fill }: TIconComponent) => {
     telegram: <Telegram />,
     twitter: <Twitter />,
     transparent: <TransparentFair fill={fill} />,
+    niftables: <Niftables />,
   };
 
   return ICON[name];

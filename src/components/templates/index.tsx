@@ -1,9 +1,9 @@
-// pass down header data, footer data etc as props here {header, footer}
 import CardsSection from "../sections/cards";
+import Footer from "../sections/footer";
 import Header from "../sections/header";
 import Hero from "../sections/hero/index";
 import TwoColumns from "../sections/two-columns";
-const PageTemplate = (props: any) => {
+const PageTemplate = () => {
   return (
     <>
       <main className="flex">
@@ -14,13 +14,9 @@ const PageTemplate = (props: any) => {
           <TwoColumns variant="2" />
           <TwoColumns variant="3" />
           <CardsSection />
-
-          {/* {TWO_COLUMN_VARIANTS.map((variant: "1" | "2" | "3") => (
-            <TwoColumns variant={variant} key={variant} />
-          ))} */}
         </section>
       </main>
-      <footer>FOOTER COMPONENT</footer>
+      <Footer />
     </>
   );
 };
