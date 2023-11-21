@@ -1,18 +1,12 @@
 .btn {
-  display: flex;
-  width: 110px;
-  height: 38px;
-  padding: 9px 23px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 6px;
-  overflow: hidden;
-  position: relative;
+  /* display and visibility */
+  @apply flex w-[110px] h-[38px] py-[9px] px-[23px] justify-center items-center rounded-md overflow-hidden relative;
+  /* typography */
   @apply font-secondary text-base lg:text-lg text-white cursor-default;
 }
 
 .btn[data-variant="outline"] {
-  border: 2px solid var(--White, #fff);
+  @apply border-2 border-white;
 }
 .btn:hover {
   border: none;
@@ -38,7 +32,8 @@
 }
 
 .btn.next::before {
-  background: #3d8bff;
+  @apply bg-blue-base;
+
   content: attr(data-text);
   position: absolute;
   text-align: center;

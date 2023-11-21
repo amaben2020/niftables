@@ -1,3 +1,5 @@
+import ChevronDown from "@/assets/svgs/Svg/ChevronDown";
+import ChevronUp from "@/assets/svgs/Svg/ChevronUp";
 import Discord from "@/assets/svgs/Svg/Discord";
 import EarlyEngagements from "@/assets/svgs/Svg/EarlyEngagements";
 import HamburgerClose from "@/assets/svgs/Svg/HamburgerClose";
@@ -22,11 +24,13 @@ export type TIconComponent = {
     | "twitter"
     | "transparent"
     | "niftables"
-    | "hamburgerClose";
-  fill?: string;
+    | "hamburgerClose"
+    | "chevronUp"
+    | "chevronDown";
+  fill?: boolean;
 };
 
-const IconComponent = ({ name, fill }: TIconComponent) => {
+const IconComponent = ({ name, fill, ...rest }: TIconComponent) => {
   if (process.env.NODE_ENV === "development") {
     if (!name.length) console.log("Insert an icon name");
   }
@@ -35,13 +39,15 @@ const IconComponent = ({ name, fill }: TIconComponent) => {
     hamburgerClose: <HamburgerClose />,
     logo: <Logo />,
     discord: <Discord />,
-    engagement: <EarlyEngagements fill={fill} />,
-    limitless: <LimitlessCrypto fill={fill} />,
-    profitability: <Profitability fill={fill} />,
+    engagement: <EarlyEngagements fill={fill} {...rest} />,
+    limitless: <LimitlessCrypto fill={fill} {...rest} />,
+    profitability: <Profitability fill={fill} {...rest} />,
     telegram: <Telegram />,
     twitter: <Twitter />,
-    transparent: <TransparentFair fill={fill} />,
+    transparent: <TransparentFair fill={fill} {...rest} />,
     niftables: <Niftables />,
+    chevronUp: <ChevronUp />,
+    chevronDown: <ChevronDown />,
   };
 
   return ICON[name];

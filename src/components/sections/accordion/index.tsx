@@ -1,11 +1,52 @@
-const Accordion = () => {
+import IconComponent from "@/components/elements/icon";
+import { useState } from "react";
+const Accordion = ({ title = " ", content = "" }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
+
+  {
+    /* <IconComponent name="engagement" fill={true} />
+          <IconComponent name="transparent" fill={true} />
+          <IconComponent name="limitless" fill={true} className=" h-28 w-28" /> */
+  }
+
   return (
-    <div>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis
-        tempore obcaecati quae id quasi, neque vitae nemo ut quis praesentium.
-        Velit veritatis ab maxime mollitia sunt commodi ut odit ratione!
-      </p>
+    <div className="border-b border-custom-main py-8 w-full lg:max-w-[552px] relative ">
+      <button
+        className="flex items-center justify-between cursor-pointer transition-all duration-300 ease-in-out gap-5 "
+        onClick={handleToggle}
+      >
+        <IconComponent
+          name="profitability"
+          fill={isOpen}
+          className="w-28 h-32 mr-5"
+        />
+
+        <p className="text-lg lg:text-[22px] font-bold font-secondary text-left break-words lg:max-w-[336px] mr-auto hover:text-blue-base">
+          {title} Profitability and Growth{" "}
+        </p>
+        <div className="absolute right-0">
+          <span>
+            {isOpen ? (
+              <IconComponent name="chevronUp" />
+            ) : (
+              <IconComponent name="chevronDown" />
+            )}
+          </span>
+        </div>
+      </button>
+      {isOpen && (
+        <p className="mt-2 overflow-hidden transition-all duration-500 ease-in">
+          {content}
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem,
+          nobis! Ad nihil deserunt repudiandae temporibus inventore expedita
+          neque facere, repellat architecto ipsum corporis ipsa quaerat
+          praesentium labore. Dolores, labore tenetur?
+        </p>
+      )}
     </div>
   );
 };

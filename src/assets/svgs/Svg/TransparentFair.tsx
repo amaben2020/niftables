@@ -1,11 +1,11 @@
-const TransparentFair = ({ fill = "none", ...props }: { fill?: string }) => {
+const TransparentFair = ({ fill, ...props }: { fill?: boolean }) => {
   return (
     <svg
       {...props}
       width="73"
       height="83"
       viewBox="0 0 73 83"
-      fill={fill}
+      fill=""
       xmlns="http://www.w3.org/2000/svg"
     >
       <g clip-path="url(#clip0_2207_510)">
