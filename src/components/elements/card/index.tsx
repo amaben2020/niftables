@@ -1,42 +1,44 @@
-import alienImage from "@/assets/images/alien-off.png";
 import clsx from "clsx";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import styles from "./styles.module.css";
 
-const Card = () => {
+type TCard = {
+  title: string;
+  image: StaticImageData;
+  description: string;
+  subtitle: string;
+};
+
+const Card = ({ title, image, description, subtitle }: TCard) => {
   return (
     <div
       className={clsx(
         styles["card-zoom"],
-        "rounded-md max-w-[450px] bg-black-secondary pt-5 pb-7 relative",
+        "rounded-md min-w-[450px] 2xl:min-w-0 w-0 2xl:w-[450px]  h-[659px] bg-black-secondary pt-5 pb-7 relative",
       )}
     >
-      <div className="pt-4 px-6 pb-12 flex flex-col gap-y-5">
-        <p className="font-primary text-4xl uppercase z-10">token</p>
+      <div className="pt-4 px-6 flex flex-col gap-y-5">
+        <p className="font-primary text-4xl uppercase z-10">{title}</p>
         <p className="text-lg lg:text-[22px] font-bold font-secondary gradient-text text-left ">
-          The Gateway token to the world of AI
+          {subtitle}
         </p>
       </div>
 
-      <div className="relative max-w-[423px] overflow-hidden">
-        <Image
-          src={alienImage}
-          width={423}
-          alt=""
-          height={234}
-          className={clsx(styles["card-zoom-image"])}
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-700 mix-blend-color"></div>
+      <div className="absolute top-[15%]">
+        <div className="relative max-w-[423px] overflow-hidden rounded-r-md mt-20 mb-10">
+          <Image
+            src={image}
+            width={423}
+            alt=""
+            height={234}
+            className={styles["card-zoom-image"]}
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-700 mix-blend-color"></div>
+        </div>
       </div>
 
-      <div className="p-6 text-white">
-        <p className="leading-[130%]">
-          Set to debut in the latter half of 2024, the CREON token serves as the
-          pioneering link between cutting-edge AI initiatives and blockchain
-          technology. This innovative token provides NFT and token holders with
-          unparalleled access to our Launchpad, AI tools, and exclusive
-          pre-launch investment prospects.
-        </p>
+      <div className="px-6 text-white bottom-14 absolute min-h-[161px]">
+        <p className="leading-[130%]">{description}</p>
       </div>
 
       <div className="absolute -top-3 right-8 bg-white rounded-[100px] text-xs font-bold text-black font-secondary py-[3px] px-[6px]">
