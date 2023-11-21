@@ -19,10 +19,7 @@
 }
 
 .btn[data-variant="fill"] {
-  display: flex;
-  min-width: 231px;
-  padding: 20px 56px;
-  border-radius: 6px;
+  @apply flex   w-full   md:w-[231px] py-5 px-14 rounded-md;
   background: var(--Linear, linear-gradient(90deg, #3d8bff 0%, #ab23ff 100%));
 }
 
