@@ -18,7 +18,9 @@ const Card = ({ title, image, description, subtitle }: TCard) => {
       )}
     >
       <div className="pt-4 px-6 flex flex-col gap-y-5">
-        <p className="font-primary text-4xl uppercase z-10">{title}</p>
+        <p className="font-primary text-3xl md:text-4xl uppercase z-10">
+          {title}
+        </p>
         <p className="text-lg lg:text-[22px] font-bold font-secondary gradient-text text-left ">
           {subtitle}
         </p>
