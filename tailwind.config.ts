@@ -8,6 +8,24 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      animation: {
+        openmenu: "openmenu 1s ease-in",
+        closemenu: "closemenu 1s ease-in",
+      },
+      keyframes: {
+        openmenu: {
+          // starting position
+          "0%": { left: "-224px" },
+          // final position
+          "100%": { left: "0px" },
+        },
+        closemenu: {
+          // starting position
+          "0%": { left: "0px" },
+          // final position
+          "100%": { left: "-224px" },
+        },
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

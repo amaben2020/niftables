@@ -20,7 +20,7 @@ const PageTemplate = () => {
   );
   return (
     <>
-      <main className="flex">
+      <main>
         <Header />
         <section className="relative">
           <HeroSection gradient variant="hero" />
@@ -31,6 +31,7 @@ const PageTemplate = () => {
           <HorizontalCardWithVideoBg variant="horizontal" />
         </section>
       </main>
+
       <Footer />
     </>
   );

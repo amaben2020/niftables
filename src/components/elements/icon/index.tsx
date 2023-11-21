@@ -1,5 +1,6 @@
 import Discord from "@/assets/svgs/Svg/Discord";
 import EarlyEngagements from "@/assets/svgs/Svg/EarlyEngagements";
+import HamburgerClose from "@/assets/svgs/Svg/HamburgerClose";
 import HamburgerOpen from "@/assets/svgs/Svg/HamburgerOpen";
 import LimitlessCrypto from "@/assets/svgs/Svg/LimitlessCrypto";
 import Logo from "@/assets/svgs/Svg/Logo";
@@ -20,7 +21,8 @@ export type TIconComponent = {
     | "telegram"
     | "twitter"
     | "transparent"
-    | "niftables";
+    | "niftables"
+    | "hamburgerClose";
   fill?: string;
 };
 
@@ -30,6 +32,7 @@ const IconComponent = ({ name, fill }: TIconComponent) => {
   }
   const ICON = {
     hamburger: <HamburgerOpen />,
+    hamburgerClose: <HamburgerClose />,
     logo: <Logo />,
     discord: <Discord />,
     engagement: <EarlyEngagements fill={fill} />,
