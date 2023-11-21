@@ -1,16 +1,13 @@
 import clsx from "clsx";
 
-const MobileHeader = ({ isOpen, onClick, ref }: { isOpen: boolean }) => {
-  // TODO: add click-outside
+const MobileHeader = ({ isOpen }: { isOpen: boolean }) => {
   return (
     <div
-      ref={ref}
       id="menu"
       className={clsx(
         isOpen ? "flex" : "hidden",
         "ml-auto fixed w-[50%] inset-0 bg-black z-50 right-0",
       )}
-      onClick={onClick}
     >
       <div className="flex flex-col">
         <div> Buttons </div>
