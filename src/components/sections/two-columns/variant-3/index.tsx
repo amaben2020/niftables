@@ -7,7 +7,7 @@ const ColumnVariant3 = () => {
   const isTablet = useMediaQuery(768);
 
   return (
-    <div className="grid grid-cols-2 relative gap-x-5 lg:gap-x-10">
+    <div className="grid grid-cols-2 relative gap-x-5 lg:gap-x-10 overflow-hidden">
       <div className=" col-span-2 lg:col-span-1 z-10">
         {!isTablet ? (
           <h3 className="font-primary text-4xl leading-[120%] uppercase z-10 break-words">
@@ -38,7 +38,7 @@ const ColumnVariant3 = () => {
         ))}
       </div>
 
-      <div className="absolute -bottom-5 left-96  lg:-left-20 xl:left-[8%] max-w-[650px] md:w-[836px]">
+      <div className="absolute -bottom-5 md:left-80 lg:-left-20 xl:left-[8%] md:w-[600px] lg:w-[836px]">
         <Image
           src={alienImage}
           width={836}
