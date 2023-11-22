@@ -1,0 +1,4 @@
+.wrapper {
+  /* display and visibility */
+  @apply flex items-center gap-3;
+}

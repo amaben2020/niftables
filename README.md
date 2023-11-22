@@ -38,3 +38,7 @@ App was deployed on [Vercel Platform](https://creon-app.vercel.app/).
 ## Contact
 
 [Linkedin](https://www.linkedin.com/in/amara-benneth-uzochukwu/).
+
+## Speed
+
+[Pagespeed](https://pagespeed.web.dev/analysis/https-creon-app-vercel-app/81e4z1szap?form_factor=desktop)

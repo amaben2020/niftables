@@ -1,54 +1,93 @@
 .link {
   /* display and visibility */
-  @apply flex w-[110px] h-[38px] py-[9px] px-[23px] justify-center items-center rounded-md overflow-hidden relative;
+  @apply flex  justify-center items-center rounded-md overflow-hidden relative;
+
+  /* box model (from outside in) */
+  @apply w-[110px] h-[38px] py-[9px] px-[23px];
+
   /* typography */
   @apply font-secondary text-base lg:text-lg text-white cursor-default;
 }
 
 .link[data-variant="outline"] {
+  /* box model (from outside in) */
   @apply border-2 border-white;
 }
 .link:hover {
+  /* box model (from outside in) */
   border: none;
 }
 
 .link[data-variant="fill"] {
-  @apply flex w-full md:w-[231px] lg:w-[453px] py-5 px-14 rounded-md;
+  /* box model (from outside in) */
+  @apply w-full md:w-[231px] lg:w-[453px] py-5 px-14 rounded-md;
+
+  /* display and visibility */
+  @apply flex;
+  /* background */
   background: var(--Linear, linear-gradient(90deg, #3d8bff 0%, #ab23ff 100%));
 }
 
 .link.next::after {
+  /* content */
   content: attr(data-text);
-  @apply absolute text-center w-full text-white top-[7px];
+
+  /* position and layout */
+  @apply absolute  w-full top-[7px];
+
+  /* typography */
+  @apply text-white text-center;
+  /* animation */
   transition: all 400ms;
 }
 
 .link.next[data-variant="outline"]::after {
+  /* content */
   content: attr(data-text);
-  @apply absolute text-center w-full text-white top-[2px];
+  /* position and layout */
+  @apply absolute  w-full  top-[2px];
+  /* animation */
   transition: all 400ms;
+
+  /* typography */
+  @apply text-white text-center;
 }
 
 .link.next[data-variant="fill"]::before {
+  /* background */
   background: var(--Linear, linear-gradient(90deg, #3d8bff 0%, #3d8bff 100%));
 }
 
 .link.next::before {
-  @apply bg-blue-base absolute text-center h-full w-full text-white top-0;
+  /* position and layout */
+  @apply absolute top-0;
+  /* background */
+  @apply bg-blue-base;
+
+  /* box model */
+  @apply h-full w-full;
+  /* typography */
+  @apply text-center text-white;
+  /* content */
   content: attr(data-text);
+  /* animation */
   transition: all 400ms;
 }
 
 .link.link.next:hover::after {
-  top: -36px;
+  /* position and layout */
+  @apply -top-9;
 }
 
 .link.next::before {
+  /* content */
   content: attr(data-text);
-  top: 40px;
-  height: 100%;
+
+  /* position and layout */
+  @apply top-10 h-full;
 }
 
 .link.link.next:hover::before {
-  top: 0px;
+  /* position and layout */
+  @apply top-0;
 }

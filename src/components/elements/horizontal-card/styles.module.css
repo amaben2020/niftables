@@ -1,0 +1,37 @@
+.wrapper {
+  /* box model (from outside in) */
+  @apply min-w-full md:h-[390px] xl:h-[310px] rounded-md;
+  /* background */
+  @apply bg-black-secondary;
+  /* display and visibility */
+  @apply grid md:grid-cols-3;
+  /* position and layout */
+  @apply relative;
+  /* display and visibility */
+  @apply opacity-95     overflow-hidden;
+}
+
+.container {
+  /* display and visibility */
+  @apply col-span-3 md:col-span-2 md:order-1 order-2;
+  /* box model (from outside in) */
+  @apply md:px-[20px] px-[24px] xl:px-[40px] py-10;
+}
+
+.title {
+  /* typography */
+  @apply font-primary text-white text-3xl md:text-4xl uppercase;
+}
+
+.image-container {
+  /* display and visibility */
+  @apply col-span-3 md:col-span-1 md:order-2 order-1 min-w-full;
+}
+
+.image {
+  /* box model (from outside in) */
+  @apply min-w-full xl:h-[310px] h-[159px]  md:h-[390px];
+
+  /* image */
+  @apply object-cover;
+}

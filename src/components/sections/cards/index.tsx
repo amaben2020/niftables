@@ -1,13 +1,14 @@
 import Card from "@/components/elements/card";
 import SectionContainer from "@/components/layout/SectionContainer";
 import useMediaQuery from "@/hooks/useMediaQuery";
+import clsx from "clsx";
 import { cardsData } from "./mocks/data";
-
+import styles from "./styles.module.css";
 const CardsSection = () => {
   const isTablet = useMediaQuery(1024);
   return (
-    <SectionContainer className="overflow-x-auto whitespace-no-wrap">
-      <div className="flex gap-x-5 2xl:gap-x-10 max-w-[90vw] justify-start xl:justify-center mx-auto ">
+    <SectionContainer className={clsx(styles.wrapper, "whitespace-no-wrap")}>
+      <div className={styles.container}>
         {cardsData.map(
           ({ title, id, description, subtitle, image, imageMobile }) => (
             <Card

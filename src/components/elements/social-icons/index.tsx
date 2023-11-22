@@ -1,5 +1,6 @@
 import Link from "next/link";
 import IconComponent from "../icon";
+import styles from "./styles.module.css";
 
 export type TSocialLink = {
   url: string;
@@ -8,7 +9,7 @@ export type TSocialLink = {
 
 const SocialIcons = ({ links }: { links: TSocialLink[] }) => {
   return (
-    <span className="flex items-center gap-3">
+    <span className={styles.wrapper}>
       {links.map((link) => (
         <Link href={link.url} key={link.url}>
           <IconComponent name={link.name} />

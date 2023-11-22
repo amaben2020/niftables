@@ -1,0 +1,11 @@
+.wrapper {
+  /* clipping */
+  @apply overflow-x-auto;
+}
+
+.container {
+  /* display and visibility */
+  @apply flex justify-start xl:justify-center gap-x-5 2xl:gap-x-10;
+  /* position and layout */
+  @apply max-w-[90vw] mx-auto;
+}

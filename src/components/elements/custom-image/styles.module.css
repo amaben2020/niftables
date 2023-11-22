@@ -1,16 +1,21 @@
 .container {
+  /* position and layout */
   @apply relative;
 }
 
 .container::before {
+  /* position and layout */
   content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  @apply absolute top-0 left-0;
+
+  /* box model (from outside in) */
+  @apply w-full h-full;
+
+  /* display and visibility */
+  @apply pointer-events-none;
+
+  /* background */
   background: linear-gradient(175deg, #3d8bff 4.29%, #ab23ff 95.71%);
-  pointer-events: none;
   opacity: 1;
   mix-blend-mode: soft-light;
 }

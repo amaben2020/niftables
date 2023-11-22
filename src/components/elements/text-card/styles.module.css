@@ -1,11 +1,24 @@
+.text-card {
+  /* box model (from outside in) */
+  @apply border pt-3 px-4 pb-5 rounded-md mb-3 max-w-fit;
+}
+
 .container {
+  /* display and visibility */
   @apply flex flex-wrap gap-x-3;
 }
 
 .main-card {
+  /* display and visibility */
   @apply flex-grow;
 }
 
 .sub-card {
+  /* display and visibility */
   @apply flex-1;
+}
+
+.item {
+  /* position and layout */
+  @apply border pt-3 px-4 pb-5 rounded-md mb-3 max-w-fit;
 }

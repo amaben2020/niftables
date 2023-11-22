@@ -1,8 +1,9 @@
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { truncateText } from "@/utils/truncateText";
+import clsx from "clsx";
 import { StaticImageData } from "next/image";
 import CustomImageWithOpacity from "../custom-image/image";
-
+import styles from "./styles.module.css";
 type THorizontalCards = {
   title: string;
   description: string;
@@ -13,19 +14,22 @@ const HorizontalCard = ({ title, description, image }: THorizontalCards) => {
   const isTablet = useMediaQuery(1024);
   return (
     <>
-      <div className="min-w-full opacity-95 bg-black-secondary   grid md:grid-cols-3 relative md:h-[390px] xl:h-[310px] rounded-md overflow-hidden">
-        <div className="md:px-[20px] px-[24px] xl:px-[40px] py-10 col-span-3 md:col-span-2 md:order-1 order-2">
-          <h3 className="font-primary text-white text-3xl md:text-4xl uppercase">
-            {title}
-          </h3>
+      <div className={styles.wrapper}>
+        <div className={styles.container}>
+          <h3 className={styles.title}>{title}</h3>
           <p>{isTablet ? truncateText(description, 550) : description}</p>
         </div>
-        <div className="max-h-content col-span-3 md:col-span-1 md:order-2 order-1 min-w-full rounded-r-md">
+        <div
+          className={clsx(
+            styles["image-container"],
+            "rounded-r-md max-h-content",
+          )}
+        >
           <CustomImageWithOpacity
             image={image as StaticImageData}
             width={453}
             height={302}
-            className="min-w-full xl:h-[310px] h-[159px]  md:h-[390px] object-cover rounded-r-md"
+            className={clsx(styles.image, "rounded-r-md")}
           />
         </div>
       </div>

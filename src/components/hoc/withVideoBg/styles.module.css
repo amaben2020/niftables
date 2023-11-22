@@ -1,15 +1,16 @@
 .container {
-  position: relative;
-  width: 100vw;
-  height: 970px;
+  /* position and layout */
+  @apply w-screen relative h-[970px];
 }
 
 .container[data-variant="horizontal"] {
-  height: auto;
+  /* box model (from outside in) */
+  @apply h-auto;
 }
 
 .container[data-variant="cards"] {
-  background: black;
+  /* background */
+  @apply bg-black;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -31,14 +32,24 @@
 }
 
 .wrapper {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
+  /* position and layout */
+  @apply absolute top-0 left-0;
+  /* box model (from outside in) */
+  @apply w-full h-full;
+
+  /* image */
+  @apply object-cover;
 }
 
 .content {
-  @apply absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center w-[95%] lg:w-[93%] 2xl:w-[80%] md:pr-0;
+  /* position and layout */
+  @apply absolute top-1/2 left-1/2;
+  /* box model (from outside in) */
+  @apply w-[95%] lg:w-[93%] 2xl:w-[80%] md:pr-0;
+
+  /* transform */
+  @apply transform -translate-x-1/2 -translate-y-1/2;
+
+  /* typography */
+  @apply text-white text-center;
 }

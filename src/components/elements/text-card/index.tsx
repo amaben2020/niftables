@@ -9,10 +9,7 @@ type TTextCard = {
 const TextCard = ({ data, variant }: TTextCard) =>
   variant === "desktop" ? (
     data.map((text) => (
-      <div
-        className="border-main border pt-3 px-4 pb-5 rounded-md mb-3 max-w-fit"
-        key={text}
-      >
+      <div className={clsx(styles["text-card"], "border-main")} key={text}>
         <p>{text}</p>
       </div>
     ))
@@ -22,7 +19,8 @@ const TextCard = ({ data, variant }: TTextCard) =>
         <div
           className={clsx(
             index === 0 ? styles["main-card"] : styles["sub-card"],
-            "border-main border pt-3 px-4 pb-5 rounded-md mb-3 max-w-fit",
+            styles.item,
+            "border-main",
           )}
           key={text}
         >
