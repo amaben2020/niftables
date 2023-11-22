@@ -10,8 +10,8 @@ type THorizontalCards = {
 const HorizontalCard = ({ title, description, image }: THorizontalCards) => {
   return (
     <>
-      <div className="min-w-full opacity-95 bg-black-secondary   grid md:grid-cols-3 relative md:h-[420px] xl:h-[310px] rounded-md overflow-hidden">
-        <div className="px-[24px] md:px-[40px] py-10 col-span-3 md:col-span-2 md:order-1 order-2">
+      <div className="min-w-full opacity-95 bg-black-secondary   grid md:grid-cols-3 relative md:h-[370px] xl:h-[310px] rounded-md overflow-hidden">
+        <div className="md:px-[20px] px-[24px] xl:px-[40px] py-10 col-span-3 md:col-span-2 md:order-1 order-2">
           <h3 className="font-primary text-white text-3xl md:text-4xl uppercase">
             {title}
           </h3>
@@ -22,7 +22,7 @@ const HorizontalCard = ({ title, description, image }: THorizontalCards) => {
             image={image as StaticImageData}
             width={453}
             height={302}
-            className="min-w-full xl:h-[310px] h-[159px] sm:h-[420px] object-cover rounded-r-md"
+            className="min-w-full xl:h-[310px] h-[159px]  md:h-[370px] object-cover rounded-r-md"
           />
         </div>
       </div>
