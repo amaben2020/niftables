@@ -15,7 +15,7 @@ const withVideoBg =
     const isTablet = useMediaQuery(1024);
 
     const renderVideoSource =
-      variant === "cards" || (variant === "horizontal" && isTablet)
+      variant === "cards" && isTablet
         ? videoSrc
         : variant === "hero"
         ? videoSrc
