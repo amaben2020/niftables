@@ -1,5 +1,6 @@
 "use client";
 
+import { VIDEO_LINKS } from "@/assets/videos";
 import withVideoBg from "../hoc/withVideoBg";
 import CardsSection from "../sections/cards";
 import HorizontalCards from "../sections/cards/horizontal-cards";
@@ -8,16 +9,10 @@ import Header from "../sections/header";
 import Hero from "../sections/hero/index";
 import TwoColumns from "../sections/two-columns";
 const PageTemplate = () => {
-  const HERO_VIDEO_URL =
-    "https://res.cloudinary.com/dotcu0ow9/video/upload/v1700638061/hero_txji7w.mp4";
-
-  const HORIZONTAL_CARDS_VIDEO_URL =
-    "https://res.cloudinary.com/dotcu0ow9/video/upload/v1700638114/horizontal-cards-bg_yiroza.mp4";
-
-  const HeroSection = withVideoBg(Hero, HERO_VIDEO_URL);
+  const HeroSection = withVideoBg(Hero, VIDEO_LINKS.hero);
   const CardsSectionWithVideoBg = withVideoBg(
     CardsSection,
-    HORIZONTAL_CARDS_VIDEO_URL,
+    VIDEO_LINKS.horizontalCards,
   );
 
   return (
