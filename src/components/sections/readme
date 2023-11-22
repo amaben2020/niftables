@@ -7,11 +7,11 @@
 
 # Examples:
 
-- `/dashboard`
-- `/dashboard/cta-button`
-- `/dashboard/inputs/text`
-- `/dashboard/inputs/select`
-- `/dashboard/inputs/checkbox`
+- `/two-columns`
+- `/two-columns/cta-button`
+- `/two-columns/inputs/text`
+- `/two-columns/inputs/select`
+- `/two-columns/inputs/checkbox`
 - `/product-list`
 - `/product-list/product`
 - `/multi-step-form`
