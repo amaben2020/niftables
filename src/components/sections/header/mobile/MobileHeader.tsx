@@ -24,7 +24,7 @@ const MobileHeader = ({
       <div className="flex flex-col w-full">
         <div className="flex items-center mb-8">
           <LinkPrimary variant="outline" text="Connect" to="#" />
-          <Button className="ml-1">
+          <Button className="ml-5">
             <IconComponent name="hamburgerClose" />
           </Button>
         </div>

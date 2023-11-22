@@ -1,4 +1,4 @@
-## Niftables Frontend Developer Test
+### Niftables Frontend Developer Test
 
 ## Running the app locally
 

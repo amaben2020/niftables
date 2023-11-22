@@ -1,15 +1,7 @@
 .button {
-  display: flex;
-  width: 110px;
-  height: 38px;
-  padding: 9px 23px 11px 23px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 6px;
-
-  @apply font-secondary text-base lg:text-lg text-white;
+  @apply flex font-secondary text-base lg:text-lg text-white items-center rounded-md justify-center;
 }
 
 .button[data-variant="outline"] {
-  border: 2px solid var(--White, #fff);
+  @apply border-2 border-white;
 }

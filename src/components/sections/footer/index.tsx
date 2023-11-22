@@ -4,7 +4,7 @@ import { socialLinks } from "@/components/elements/social-icons/mocks/data";
 
 const Footer = () => {
   return (
-    <footer className="bg-black py-6 px-8 pb-11 w-full flex flex-col md:flex-row justify-between items-center gap-y-6">
+    <footer className="bg-black py-6   pb-11 w-full flex flex-col md:flex-row justify-between items-center gap-y-6  px-5 lg:px-10 2xl:px-40">
       <div className="flex items-center gap-x-20 md:gap-x-24 flex-col md:flex-row gap-y-6">
         <div className="md:order-1 order-2">
           <p className="font-secondary text-sm">

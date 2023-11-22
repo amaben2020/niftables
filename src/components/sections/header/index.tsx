@@ -29,7 +29,7 @@ const Header = () => {
       <div className="px-[15px] md:px-8 lg:px-14 flex justify-between items-center w-[100vw]">
         {isOpen && (
           <div
-            className="fixed inset-0 bg-black bg-opacity-60 z-10"
+            className="fixed block lg:hidden inset-0 bg-black bg-opacity-60 z-10"
             onClick={() => setIsOpen(false)}
           ></div>
         )}
@@ -46,7 +46,7 @@ const Header = () => {
               </Link>
             ) : (
               <Link href={data.url} key={data.id} className="relative mx-12">
-                <p className=" hover:text-blue-500 cursor-default ">
+                <p className=" hover:text-blue-500 cursor-default">
                   {data.title}
                 </p>
 
@@ -57,13 +57,7 @@ const Header = () => {
             ),
           )}
         </div>{" "}
-        {isMobile ? (
-          <Button
-            variant="outline"
-            text="Connect"
-            className="ml-auto lg:ml-16"
-          />
-        ) : (
+        {!isMobile && (
           <LinkPrimary
             variant="outline"
             text="Connect"
@@ -71,13 +65,22 @@ const Header = () => {
             to="#"
           />
         )}
-        <button
-          onClick={handleMenuOpen}
-          id="menu-toggle"
-          className="lg:hidden focus:outline-none ml-5"
-        >
-          <IconComponent name="hamburger" />
-        </button>
+        {isMobile && (
+          <div className="flex gap-x-5 items-center">
+            <LinkPrimary
+              variant="outline"
+              text="Connect"
+              className="ml-auto lg:ml-16"
+              to="#"
+            />
+            <Button
+              onClick={handleMenuOpen}
+              className="lg:hidden focus:outline-none ml-5"
+            >
+              <IconComponent name="hamburger" />
+            </Button>
+          </div>
+        )}
       </div>
 
       <MobileHeader handleIsOpen={handleMenuOpen} isOpen={isOpen} />

@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ButtonHTMLAttributes, ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
 import styles from "./styles.module.css";
 
@@ -15,7 +15,7 @@ const Button = ({
   variant,
   className,
   ...otherProps
-}: TButton) => {
+}: TButton & ButtonHTMLAttributes<HTMLButtonElement>) => {
   return (
     <button
       {...otherProps}
