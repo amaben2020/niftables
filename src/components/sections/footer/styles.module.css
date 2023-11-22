@@ -1,0 +1,40 @@
+.footer {
+  /* display and visibility */
+  @apply flex flex-col md:flex-row justify-between items-center gap-y-6;
+
+  /* box model */
+  @apply py-6 pb-11 px-5 lg:px-10 2xl:px-40 w-full;
+
+  /* background */
+  @apply bg-black;
+}
+
+.copyright {
+  /* display and visibility */
+  @apply flex items-center gap-x-20 md:gap-x-24 flex-col md:flex-row gap-y-6;
+}
+
+.arrangement {
+  /* position and layout */
+  @apply md:order-1 order-2;
+}
+
+.rights {
+  /* typography */
+  @apply font-secondary text-sm;
+}
+
+.alternating-arrangement {
+  /* position and layout */
+  @apply md:order-2 order-1;
+}
+
+.company {
+  /* display and visibility */
+  @apply flex items-center gap-3;
+}
+
+.powered {
+  /* typography */
+  @apply font-secondary text-sm;
+}
