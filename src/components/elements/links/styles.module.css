@@ -19,7 +19,12 @@
 
 .link.next::after {
   content: attr(data-text);
+  @apply absolute text-center w-full text-white top-[7px];
+  transition: all 400ms;
+}
 
+.link.next[data-variant="outline"]::after {
+  content: attr(data-text);
   @apply absolute text-center w-full text-white top-[2px];
   transition: all 400ms;
 }

@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import Link from "next/link";
 import styles from "./styles.module.css";
-const LinkPrimary = ({
+const CustomLink = ({
   variant,
   className,
   text,
@@ -23,4 +23,4 @@ const LinkPrimary = ({
   );
 };
 
-export default LinkPrimary;
+export default CustomLink;

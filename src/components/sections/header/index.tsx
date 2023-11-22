@@ -1,7 +1,7 @@
 "use client";
 import Button from "@/components/elements/button";
 import IconComponent from "@/components/elements/icon";
-import LinkPrimary from "@/components/elements/links/primary";
+import CustomLink from "@/components/elements/links";
 import { useOnClickOutside } from "@/hooks/useClickOutside";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import clsx from "clsx";
@@ -58,7 +58,7 @@ const Header = () => {
           )}
         </div>{" "}
         {!isMobile && (
-          <LinkPrimary
+          <CustomLink
             variant="outline"
             text="Connect"
             className="ml-auto lg:ml-16"
@@ -67,7 +67,7 @@ const Header = () => {
         )}
         {isMobile && (
           <div className="flex gap-x-5 items-center">
-            <LinkPrimary
+            <CustomLink
               variant="outline"
               text="Connect"
               className="ml-auto lg:ml-16"

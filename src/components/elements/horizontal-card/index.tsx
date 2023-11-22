@@ -10,7 +10,7 @@ type THorizontalCards = {
 const HorizontalCard = ({ title, description, image }: THorizontalCards) => {
   return (
     <>
-      <div className="min-w-full opacity-95 bg-black-quaternary   grid md:grid-cols-3 relative md:h-[420px] xl:h-[310px] rounded-md overflow-hidden">
+      <div className="min-w-full opacity-95 bg-black-secondary   grid md:grid-cols-3 relative md:h-[420px] xl:h-[310px] rounded-md overflow-hidden">
         <div className="px-[24px] md:px-[40px] py-10 col-span-3 md:col-span-2 md:order-1 order-2">
           <h3 className="font-primary text-white text-3xl md:text-4xl uppercase">
             {title}

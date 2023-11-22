@@ -1,4 +1,4 @@
-import LinkPrimary from "@/components/elements/links/primary";
+import CustomLink from "@/components/elements/links";
 import TextCard from "@/components/elements/text-card";
 import VideoComponent from "@/components/elements/video";
 import useMediaQuery from "@/hooks/useMediaQuery";
@@ -30,7 +30,7 @@ const ColumnVariant1 = () => {
           <TextCard data={mobileTexts} variant="mobile" />
         )}
 
-        <LinkPrimary variant="fill" text="Buy Creon Pass" to="#" />
+        <CustomLink variant="fill" text="Buy Creon Pass" to="#" />
       </div>
 
       <div className="hidden md:block md:col-span-2">

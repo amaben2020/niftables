@@ -1,6 +1,6 @@
 import Button from "@/components/elements/button";
 import IconComponent from "@/components/elements/icon";
-import LinkPrimary from "@/components/elements/links/primary";
+import CustomLink from "@/components/elements/links";
 import SocialIcons from "@/components/elements/social-icons";
 import { socialLinks } from "@/components/elements/social-icons/mocks/data";
 import clsx from "clsx";
@@ -23,7 +23,7 @@ const MobileHeader = ({
     >
       <div className="flex flex-col w-full">
         <div className="flex items-center mb-8">
-          <LinkPrimary variant="outline" text="Connect" to="#" />
+          <CustomLink variant="outline" text="Connect" to="#" />
           <Button className="ml-5">
             <IconComponent name="hamburgerClose" />
           </Button>

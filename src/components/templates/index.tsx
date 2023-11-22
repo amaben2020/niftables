@@ -20,10 +20,6 @@ const PageTemplate = () => {
     HORIZONTAL_CARDS_VIDEO_URL,
   );
 
-  const HorizontalCardWithVideoBg = withVideoBg(
-    HorizontalCards,
-    HORIZONTAL_CARDS_VIDEO_URL,
-  );
   return (
     <>
       <main>
@@ -48,7 +44,7 @@ const PageTemplate = () => {
           </section>
 
           <section className="flex flex-col order-3 lg:order-5">
-            <HorizontalCardWithVideoBg variant="horizontal" />
+            <HorizontalCards />
           </section>
         </section>
       </main>

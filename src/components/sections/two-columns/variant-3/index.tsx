@@ -1,8 +1,8 @@
 import { IMAGES } from "@/assets/images/images";
-import { accordionData } from "@/components/accordion/mocks/data";
+import Accordion from "@/components/elements/accordion";
+import { accordionData } from "@/components/elements/accordion/mocks/data";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import Image from "next/image";
-import Accordion from "../../../accordion";
 const ColumnVariant3 = () => {
   const isTablet = useMediaQuery(768);
 
