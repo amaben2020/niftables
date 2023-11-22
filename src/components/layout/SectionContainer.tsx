@@ -9,9 +9,7 @@ const SectionContainer = ({
   className?: string;
 }) => {
   return (
-    <section className={twMerge("section-container", className)}>
-      {children}
-    </section>
+    <div className={twMerge("section-container", className)}>{children}</div>
   );
 };
 

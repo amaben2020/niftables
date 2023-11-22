@@ -28,13 +28,28 @@ const PageTemplate = () => {
     <>
       <main>
         <Header />
-        <section className="relative">
+        <section className="relative flex flex-col">
           <HeroSection gradient variant="hero" />
-          <TwoColumns variant="1" />
-          <TwoColumns variant="2" />
-          <TwoColumns variant="3" />
-          <CardsSectionWithVideoBg variant="cards" />
-          <HorizontalCardWithVideoBg variant="horizontal" />
+          <section className="flex flex-col order-4 lg:order-1">
+            <TwoColumns variant="1" />
+          </section>
+
+          <section className="flex flex-col order-2 lg:order-2">
+            {" "}
+            <TwoColumns variant="2" />
+          </section>
+
+          <section className="flex flex-col order-1 lg:order-3">
+            <TwoColumns variant="3" />
+          </section>
+
+          <section className="flex flex-col order-5 lg:order-4">
+            <CardsSectionWithVideoBg variant="cards" />
+          </section>
+
+          <section className="flex flex-col order-3 lg:order-5">
+            <HorizontalCardWithVideoBg variant="horizontal" />
+          </section>
         </section>
       </main>
 
