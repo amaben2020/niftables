@@ -9,7 +9,7 @@ const ColumnVariant3 = () => {
   return (
     <div className="grid grid-cols-2 relative gap-x-5 lg:gap-x-10 overflow-hidden">
       <div className=" col-span-2 lg:col-span-1 z-10">
-        <h3 className="font-primary text-[28px] lg:text-4xl leading-[120%] uppercase z-10 break-words block md:hidden xl:block">
+        <h3 className="font-primary text-[28px] lg:text-4xl leading-[120%] uppercase z-10 break-words block md:hidden lg:block">
           <span className="text-white">
             Our vision is to support the innovation of AI blockchain projects
           </span>{" "}
@@ -18,7 +18,7 @@ const ColumnVariant3 = () => {
           </span>
         </h3>
 
-        <h3 className="bg-gradient-to-r from-blue-500 to-purple-700 text-transparent bg-clip-text uppercase font-primary text-[28px] leading-[120%] hidden md:block xl:hidden">
+        <h3 className="bg-gradient-to-r from-blue-500 to-purple-700 text-transparent bg-clip-text uppercase font-primary text-[28px] leading-[120%] hidden md:block lg:hidden">
           Our mission is to provide unique, confidential AI-based tools, to
           which you will gain lifetime access through NFT tokens and our CREON
           token.
