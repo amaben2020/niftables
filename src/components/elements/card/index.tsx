@@ -14,7 +14,7 @@ const Card = ({ title, image, description, subtitle }: TCard) => {
     <div
       className={clsx(
         styles["card-zoom"],
-        "rounded-md min-w-[308px] md:min-w-[450px] 2xl:min-w-0 w-0 2xl:w-[450px] h-[659px] bg-black-secondary pt-5 pb-7 relative",
+        "rounded-md min-w-[308px] md:min-w-[450px] 2xl:min-w-0 w-0 2xl:w-[450px] h-[659px] bg-black-quaternary md:bg-black-secondary pt-5 pb-7 relative",
       )}
     >
       <div className="pt-4 px-6 flex flex-col gap-y-5">
@@ -27,7 +27,7 @@ const Card = ({ title, image, description, subtitle }: TCard) => {
       </div>
 
       <div className="absolute top-[15%]">
-        <div className="relative h-[180px] md:h-[233px] lg:h-auto max-w-[423px] overflow-hidden rounded-r-md mt-20 mb-10">
+        <div className="relative h-[180px] md:h-[233px] lg:h-auto max-w-[295px] sm:max-w-[310px] md:max-w-[423px] overflow-hidden rounded-r-md mt-20 mb-10">
           <Image
             src={image}
             width={423}
