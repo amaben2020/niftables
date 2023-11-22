@@ -8,15 +8,21 @@ import Header from "../sections/header";
 import Hero from "../sections/hero/index";
 import TwoColumns from "../sections/two-columns";
 const PageTemplate = () => {
-  const HeroSection = withVideoBg(Hero, "/hero.mp4");
+  const HERO_VIDEO_URL =
+    "https://res.cloudinary.com/dotcu0ow9/video/upload/v1700638061/hero_txji7w.mp4";
+
+  const HORIZONTAL_CARDS_VIDEO_URL =
+    "https://res.cloudinary.com/dotcu0ow9/video/upload/v1700638114/horizontal-cards-bg_yiroza.mp4";
+
+  const HeroSection = withVideoBg(Hero, HERO_VIDEO_URL);
   const CardsSectionWithVideoBg = withVideoBg(
     CardsSection,
-    "/horizontal-cards-bg.mp4",
+    HORIZONTAL_CARDS_VIDEO_URL,
   );
 
   const HorizontalCardWithVideoBg = withVideoBg(
     HorizontalCards,
-    "/horizontal-cards-bg.mp4",
+    HORIZONTAL_CARDS_VIDEO_URL,
   );
   return (
     <>

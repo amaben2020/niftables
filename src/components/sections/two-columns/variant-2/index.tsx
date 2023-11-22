@@ -6,6 +6,9 @@ import clsx from "clsx";
 const ColumnVariant2 = () => {
   const isTablet = useMediaQuery(1024);
 
+  const PROFITING_VIDEO_URL =
+    "https://res.cloudinary.com/dotcu0ow9/video/upload/v1700638068/profiting_tablet_sfi0kz.mp4";
+
   return (
     <div>
       <h2 className={clsx("lg:pb-36")}>Profiting Through</h2>
@@ -17,7 +20,7 @@ const ColumnVariant2 = () => {
       <div className="grid grid-cols-1 gap-5 2xl:gap-6 md:grid-cols-4 md:pb-20 lg:pb-28 items-center">
         <div className="col-span-3">
           {isTablet ? (
-            <VideoComponent url="/profiting_tablet.mp4" />
+            <VideoComponent url={PROFITING_VIDEO_URL} />
           ) : (
             <CustomImageWithOpacity image={profitingImage} />
           )}

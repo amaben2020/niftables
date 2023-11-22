@@ -8,6 +8,9 @@ import { mobileTexts, texts } from "../mocks/data";
 const ColumnVariant1 = () => {
   const isTablet = useMediaQuery(768);
 
+  const VIDEO_URL =
+    "https://res.cloudinary.com/dotcu0ow9/video/upload/v1700638062/rotating-device_axgx9x.mp4";
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:pb-20 lg:pb-28">
       <div className="col-span-2">
@@ -18,7 +21,7 @@ const ColumnVariant1 = () => {
         </p>
 
         <div className="md:hidden col-span-2 px-4">
-          <VideoComponent url="/rotating-device.mp4" />
+          <VideoComponent url={VIDEO_URL} />
         </div>
 
         {!isTablet ? (
