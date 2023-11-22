@@ -34,7 +34,7 @@ const ColumnVariant1 = () => {
       </div>
 
       <div className="hidden md:block md:col-span-2">
-        <VideoComponent url="/rotating-device.mp4" />
+        <VideoComponent url={VIDEO_URL} />
       </div>
     </div>
   );
