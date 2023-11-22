@@ -1,6 +1,6 @@
 import IconComponent from "@/components/elements/icon";
 import { useState } from "react";
-
+import styles from "./styles.module.css";
 type TAccordion = {
   title: string;
   content: string;
@@ -15,17 +15,12 @@ const Accordion = ({ title, content, icon }: TAccordion) => {
   };
 
   return (
-    <div className="border-b border-custom-main py-8 w-full lg:max-w-[552px] relative">
-      <button
-        className="flex items-center justify-between cursor-pointer transition-all duration-300 ease-in-out"
-        onClick={handleToggle}
-      >
-        <IconComponent name={icon} fill={isOpen} className="w-28 h-32" />
+    <div className={styles.wrapper}>
+      <button className={styles.button} onClick={handleToggle}>
+        <IconComponent name={icon} fill={isOpen} className={styles.icon} />
 
-        <p className="text-lg lg:text-[22px] font-bold font-secondary text-left break-words mr-auto hover:text-blue-base ml-8">
-          {title}
-        </p>
-        <div className="absolute right-0">
+        <p className={styles.title}>{title}</p>
+        <div className={styles.chevron}>
           <span>
             {isOpen ? (
               <IconComponent name="chevronUp" />
@@ -35,11 +30,7 @@ const Accordion = ({ title, content, icon }: TAccordion) => {
           </span>
         </div>
       </button>
-      {isOpen && (
-        <p className="mt-2 overflow-hidden overflow-y-scroll max-h-32 transition-all duration-500 ease-in w-3/4 ml-auto">
-          {content}
-        </p>
-      )}
+      {isOpen && <p className={styles.content}>{content}</p>}
     </div>
   );
 };

@@ -1,0 +1,88 @@
+https://9elements.com/css-rule-order/
+
+/* inheritance */
+composes
+extends
+@mixin
+
+/* css variables */
+
+/* generated content */
+content
+
+/* position and layout */
+position
+z-index
+top
+bottom
+left
+right
+Flexbox properties
+float
+clear
+
+/* display and visibility */
+display
+opacity
+
+/* clipping */
+transform
+overflow
+clip
+
+/* animation */
+animation
+transition
+
+/* box model (from outside in) */
+margin
+box-shadow
+border
+border-radius
+box-sizing
+width
+height
+padding
+
+/* background */
+background
+cursor
+
+/* typography */
+font-size
+line-height
+font-family
+font-weight
+font-style
+text-align
+text-transform
+word-spacing
+color
+
+/* pseudo-elements */
+::before
+::after
+
+/* pseudo-classes */
+:hover
+:focus
+:active
+:first-child
+:last-child
+
+.class {
+  /* inheritance */
+  /* variables */
+  /* generated content */
+  /* position and layout */
+  /* display and visibility */
+  /* clipping */
+  /* animation */
+  /* box model */
+  /* background */
+  /* typography */
+  /* pseudo-classes */
+  /* media */
+  /* children */
+  /* variants */
+}

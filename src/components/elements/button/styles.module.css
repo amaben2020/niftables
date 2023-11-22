@@ -1,7 +1,15 @@
 .button {
-  @apply flex font-secondary text-base lg:text-lg text-white items-center rounded-md justify-center;
+  /* box model (from outside in) */
+  @apply rounded-md;
+
+  /* display and visibility */
+  @apply items-center  justify-center flex;
+
+  /* typography */
+  @apply font-secondary text-base lg:text-lg text-white;
 }
 
 .button[data-variant="outline"] {
+  /* box model (from outside in) */
   @apply border-2 border-white;
 }
