@@ -1,0 +1,64 @@
+.header {
+  /* position and layout */
+  @apply absolute z-20 top-10;
+}
+
+.container {
+  /* box model (from outside in) */
+  @apply px-[15px] md:px-8 lg:px-14  w-[100vw];
+  /* display and visibility */
+  @apply flex justify-between items-center;
+}
+.button {
+  /* position and layout */
+  @apply fixed block lg:hidden inset-0 z-10;
+  /* background */
+  @apply bg-black bg-opacity-60;
+}
+.info {
+  /* display and visibility */
+  @apply hidden lg:flex;
+  /* box model (from outside in) */
+  @apply ml-auto;
+}
+.link {
+  /* cursor */
+  @apply cursor-default;
+  /* typography */
+  @apply hover:text-blue-base;
+}
+
+.link2 {
+  /* typography */
+  @apply hover:text-blue-500;
+  /* cursor */
+  @apply cursor-default;
+}
+
+.soon {
+  /* typography */
+  @apply text-pink-base rounded-[100px] text-xs font-bold;
+
+  /* background */
+  @apply bg-black;
+  /* box model (from outside in) */
+  @apply px-1 pt-0.5 pb-[1px];
+  /* position and layout */
+  @apply absolute -right-11 -top-0.5;
+}
+.btn {
+  /* box model (from outside in) */
+  @apply ml-auto lg:ml-16;
+}
+
+.btn-wrapper {
+  /* display and visibility */
+  @apply flex gap-x-5 items-center;
+}
+.btn-base {
+  /* display and visibility */
+  @apply lg:hidden focus:outline-none;
+
+  /* box model */
+  @apply ml-5;
+}

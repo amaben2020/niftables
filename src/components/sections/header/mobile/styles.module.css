@@ -1,0 +1,41 @@
+.drawer {
+  /* position and layout */
+  @apply right-0  fixed w-[62%] inset-0  z-50;
+  /* background */
+  @apply bg-black;
+  /* box model (from outside in) */
+  @apply pl-10 py-5 ml-auto;
+}
+
+.drawer-container {
+  /* display and visibility */
+  @apply flex flex-col;
+  /* box model (from outside in) */
+  @apply w-full;
+}
+.drawer-heading {
+  /* display and visibility */
+  @apply flex items-center;
+  /* box model (from outside in) */
+  @apply mb-8;
+}
+.hamburger {
+  /* box model (from outside in) */
+  @apply ml-5;
+}
+
+.links {
+  /* display and visibility */
+  @apply flex flex-col items-start;
+  /* typography */
+  @apply font-secondary text-base font-bold text-left;
+}
+.link {
+  /* typography */
+  @apply text-white;
+  @apply py-4 border-y w-full;
+}
+.socials {
+  /* box model (from outside in) */
+  @apply mt-auto mb-3;
+}

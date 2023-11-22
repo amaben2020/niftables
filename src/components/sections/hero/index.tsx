@@ -1,11 +1,12 @@
 "use client";
 import useMediaQuery from "@/hooks/useMediaQuery";
+import styles from "./styles.module.css";
 const Hero = () => {
   const isMobile = useMediaQuery(1024);
   return (
     <>
       {isMobile ? (
-        <h1 className="md:pr-[200px]">
+        <h1 className={styles.hero}>
           Empowering AI-Crypto Innovations and Integrating AI Tools into crypto.
         </h1>
       ) : (
@@ -14,7 +15,7 @@ const Hero = () => {
         </h1>
       )}
 
-      <div className="w-full md:w-[73%] lg:w-[656px] pt-5 lg:pt-12">
+      <div className={styles.content}>
         {!isMobile ? (
           <h3 className="custom-border">
             Hold the Creon Pass NFT and earn passive income from AI Tools{" "}

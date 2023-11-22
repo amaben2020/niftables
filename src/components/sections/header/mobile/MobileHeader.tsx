@@ -4,7 +4,7 @@ import CustomLink from "@/components/elements/links";
 import SocialIcons from "@/components/elements/social-icons";
 import { socialLinks } from "@/components/elements/social-icons/mocks/data";
 import clsx from "clsx";
-
+import styles from "./styles.module.css";
 const MobileHeader = ({
   isOpen,
   handleIsOpen,
@@ -18,22 +18,20 @@ const MobileHeader = ({
       onClick={handleIsOpen}
       className={clsx(
         isOpen ? "flex  animate-openmenu" : "hidden",
-        "ml-auto fixed w-[62%] inset-0 bg-black z-50 right-0 pl-10 py-5 animate-closemenu lg:hidden block",
+        "animate-closemenu lg:hidden block",
+        styles.drawer,
       )}
     >
-      <div className="flex flex-col w-full">
-        <div className="flex items-center mb-8">
+      <div className={styles["drawer-container"]}>
+        <div className={styles["drawer-heading"]}>
           <CustomLink variant="outline" text="Connect" to="#" />
-          <Button className="ml-5">
+          <Button className={styles.hamburger}>
             <IconComponent name="hamburgerClose" />
           </Button>
         </div>
 
-        <div className="flex flex-col items-start font-secondary text-base font-bold text-left ">
-          <a
-            href="#"
-            className="text-white py-4 border-y border-custom-main w-full"
-          >
+        <div className={styles.links}>
+          <a href="#" className={clsx(styles.link, "border-custom-main")}>
             Creon Pass
           </a>
           <a
@@ -55,7 +53,7 @@ const MobileHeader = ({
             AL Launchpad
           </a>
         </div>
-        <div className="mt-auto mb-3">
+        <div className={styles.socials}>
           <SocialIcons links={socialLinks} />
         </div>
       </div>

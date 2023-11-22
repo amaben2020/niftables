@@ -28,6 +28,7 @@
   background: var(--Linear, linear-gradient(90deg, #3d8bff 0%, #ab23ff 100%));
 }
 
+/* pseudo-elements */
 .link.next::after {
   /* content */
   content: attr(data-text);
@@ -41,6 +42,7 @@
   transition: all 400ms;
 }
 
+/* pseudo-elements */
 .link.next[data-variant="outline"]::after {
   /* content */
   content: attr(data-text);
@@ -53,11 +55,13 @@
   @apply text-white text-center;
 }
 
+/* pseudo-elements */
 .link.next[data-variant="fill"]::before {
   /* background */
   background: var(--Linear, linear-gradient(90deg, #3d8bff 0%, #3d8bff 100%));
 }
 
+/* pseudo-elements */
 .link.next::before {
   /* position and layout */
   @apply absolute top-0;
@@ -74,11 +78,13 @@
   transition: all 400ms;
 }
 
+/* pseudo-elements */
 .link.link.next:hover::after {
   /* position and layout */
   @apply -top-9;
 }
 
+/* pseudo-elements */
 .link.next::before {
   /* content */
   content: attr(data-text);
@@ -87,6 +93,7 @@
   @apply top-10 h-full;
 }
 
+/* pseudo-elements */
 .link.link.next:hover::before {
   /* position and layout */
   @apply top-0;

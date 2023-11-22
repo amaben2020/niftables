@@ -1,0 +1,9 @@
+.hero {
+  /* box model (from outside in) */
+  @apply md:pr-52;
+}
+
+.content {
+  /* box model (from outside in) */
+  @apply w-full md:w-[73%] lg:w-[656px] pt-5 lg:pt-12;
+}

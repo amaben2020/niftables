@@ -9,6 +9,7 @@ import Link from "next/link";
 import { useRef, useState } from "react";
 import MobileHeader from "./mobile/MobileHeader";
 import { headerData } from "./mocks/data";
+import styles from "./styles.module.css";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,34 +26,25 @@ const Header = () => {
   useOnClickOutside(ref, handleClickOutside);
 
   return (
-    <header className="absolute z-20 top-10" ref={ref}>
-      <div className="px-[15px] md:px-8 lg:px-14 flex justify-between items-center w-[100vw]">
+    <header className={styles.header} ref={ref}>
+      <div className={styles.container}>
         {isOpen && (
-          <div
-            className="fixed block lg:hidden inset-0 bg-black bg-opacity-60 z-10"
-            onClick={() => setIsOpen(false)}
-          ></div>
+          <div className={styles.button} onClick={() => setIsOpen(false)}></div>
         )}
         <div>
           <IconComponent name="logo" />
         </div>
-        <div className={clsx("hidden lg:flex ml-auto")}>
+        <div className={styles.info}>
           {headerData.map((data) =>
             data.isAvailable ? (
               <Link href={data.url} key={data.id}>
-                <p className="hover:text-blue-base cursor-default">
-                  {data.title}{" "}
-                </p>
+                <p className={styles.link}>{data.title} </p>
               </Link>
             ) : (
               <Link href={data.url} key={data.id} className="relative mx-12">
-                <p className=" hover:text-blue-500 cursor-default">
-                  {data.title}
-                </p>
+                <p className={styles.link2}>{data.title}</p>
 
-                <span className="text-pink-base px-1 pt-0.5 pb-[1px] bg-black  absolute -right-11 rounded-[100px] -top-0.5 text-xs font-bold">
-                  Soon
-                </span>
+                <span className={styles.soon}>Soon</span>
               </Link>
             ),
           )}
@@ -61,22 +53,19 @@ const Header = () => {
           <CustomLink
             variant="outline"
             text="Connect"
-            className="ml-auto lg:ml-16"
+            className={styles.btn}
             to="#"
           />
         )}
         {isMobile && (
-          <div className="flex gap-x-5 items-center">
+          <div className={styles["btn-wrapper"]}>
             <CustomLink
               variant="outline"
               text="Connect"
-              className="ml-auto lg:ml-16"
+              className={styles.btn}
               to="#"
             />
-            <Button
-              onClick={handleMenuOpen}
-              className="lg:hidden focus:outline-none ml-5"
-            >
+            <Button onClick={handleMenuOpen} className={styles["btn-base"]}>
               <IconComponent name="hamburger" />
             </Button>
           </div>
