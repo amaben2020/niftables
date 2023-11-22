@@ -1,4 +1,4 @@
-import alienImage from "@/assets/images/alien-tomb.png";
+import { IMAGES } from "@/assets/images/images";
 import { accordionData } from "@/components/accordion/mocks/data";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import Image from "next/image";
@@ -28,7 +28,7 @@ const ColumnVariant3 = () => {
             {isTablet && (
               <div className="ml-auto w-full max-w-sm">
                 <Image
-                  src={alienImage}
+                  src={IMAGES.alienTomb}
                   width={436}
                   height={500}
                   alt=""
@@ -53,7 +53,7 @@ const ColumnVariant3 = () => {
       {!isTablet && (
         <div className="absolute -bottom-5 md:left-80 lg:-left-20 xl:left-[8%] md:w-[600px] lg:w-[836px]">
           <Image
-            src={alienImage}
+            src={IMAGES.alienTomb}
             width={836}
             height={500}
             alt=""

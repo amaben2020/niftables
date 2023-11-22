@@ -4,7 +4,7 @@ import CustomImageWithOpacity from "../custom-image/image";
 type THorizontalCards = {
   title: string;
   description: string;
-  image: StaticImageData;
+  image: StaticImageData | string;
 };
 
 const HorizontalCard = ({ title, description, image }: THorizontalCards) => {
@@ -19,7 +19,7 @@ const HorizontalCard = ({ title, description, image }: THorizontalCards) => {
         </div>
         <div className="max-h-content col-span-3 md:col-span-1 md:order-2 order-1 min-w-full rounded-r-md">
           <CustomImageWithOpacity
-            image={image}
+            image={image as StaticImageData}
             width={453}
             height={302}
             className="min-w-full xl:h-[310px] h-[159px] sm:h-[420px] object-cover rounded-r-md"

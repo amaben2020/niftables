@@ -2,7 +2,7 @@ import Image, { StaticImageData } from "next/image";
 import { twMerge } from "tailwind-merge";
 import styles from "./styles.module.css";
 type TCustomImage = {
-  image: StaticImageData;
+  image: StaticImageData | string;
   width?: number;
   height?: number;
   className?: string;

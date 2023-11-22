@@ -1,4 +1,4 @@
-import profitingImage from "@/assets/images/profiting.png";
+import { IMAGES } from "@/assets/images/images";
 import CustomImageWithOpacity from "@/components/elements/custom-image/image";
 import VideoComponent from "@/components/elements/video";
 import useMediaQuery from "@/hooks/useMediaQuery";
@@ -22,7 +22,7 @@ const ColumnVariant2 = () => {
           {isTablet ? (
             <VideoComponent url={PROFITING_VIDEO_URL} />
           ) : (
-            <CustomImageWithOpacity image={profitingImage} />
+            <CustomImageWithOpacity image={IMAGES.profiting} />
           )}
           <div className="col-span-1 px-4"></div>
         </div>

@@ -12,7 +12,7 @@ const CardsSection = () => {
             title={title}
             description={description}
             subtitle={subtitle}
-            image={image}
+            image={image as any}
           />
         ))}
       </div>
