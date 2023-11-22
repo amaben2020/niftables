@@ -37,18 +37,24 @@
   }
 
   .border-main {
+    /* box model */
     @apply border-custom-main border-b;
   }
 
   .gradient-text {
+    /* background */
     @apply bg-gradient-to-r from-blue-500 to-purple-700 text-transparent bg-clip-text;
   }
 
   .section-container {
-    @apply px-5 lg:px-10 2xl:px-40 py-16   bg-black;
+    /* box model */
+    @apply px-5 lg:px-10 2xl:px-40 py-16;
+    /* background */
+    @apply bg-black;
   }
 
   .custom-border {
+    /* position and layout */
     @apply relative;
   }
 
@@ -69,22 +75,30 @@
 
 @layer base {
   h1 {
+    /* typography */
     @apply font-primary text-[32px] md:text-[44px] lg:text-[68px] text-white uppercase custom-shadow text-left leading-[110%];
   }
 
   h2 {
+    /* typography */
     @apply font-primary text-[32px] md:text-[44px] lg:text-[68px] text-white uppercase custom-shadow text-left leading-[110%];
   }
 
   h3 {
-    @apply text-lg lg:text-[22px] font-bold font-secondary gradient-text text-left  pt-[7px] pb-3;
+    /* typography */
+    @apply text-lg lg:text-[22px] font-bold font-secondary gradient-text text-left;
+
+    /* box model */
+    @apply pt-[7px] pb-3;
   }
 
   .sub-title {
+    /* typography */
     @apply font-primary text-[22px] sm:text-[28px] leading-[110%] uppercase;
   }
 
   p {
+    /* typography */
     @apply font-secondary text-base lg:text-lg text-white;
   }
 }

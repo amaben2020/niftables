@@ -27,9 +27,9 @@ This codebase utilizes typescript, tailwind css and Brad Frost atomic design pri
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Performance Optimization
+## Performance Optimization strategy
 
-Assets were deployed to Cloudinary for better speed [Cloudinary Platform](https://cloudinary.com/documentation).
+Assets were deployed to Cloudinary for better speed and overall superior performance [Cloudinary Platform](https://cloudinary.com/documentation).
 
 ## Deployed app
 

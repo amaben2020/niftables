@@ -1,17 +1,16 @@
 import useMediaQuery from "@/hooks/useMediaQuery";
-import { useEffect, useState } from "react";
+import { ComponentType, useEffect, useState } from "react";
 import styles from "./styles.module.css";
 
+type TComponentProps = {
+  gradient?: boolean;
+  variant?: "hero" | "cards" | "horizontal";
+};
+
 const withVideoBg =
-  (Component: any, videoSrc = "/hero.mp4") =>
+  (Component: ComponentType<TComponentProps>, videoSrc: string) =>
   // eslint-disable-next-line react/display-name
-  ({
-    gradient,
-    variant,
-  }: {
-    gradient?: boolean;
-    variant?: "hero" | "cards" | "horizontal";
-  }) => {
+  ({ gradient, variant }: TComponentProps) => {
     const isTablet = useMediaQuery(1024);
 
     const renderVideoSource =

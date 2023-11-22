@@ -1,0 +1,4 @@
+.home {
+  /* display and visibility */
+  @apply flex min-h-screen flex-col items-center justify-between;
+}
