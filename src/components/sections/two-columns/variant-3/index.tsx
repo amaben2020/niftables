@@ -40,7 +40,7 @@ const ColumnVariant3 = () => {
         )}
       </div>
 
-      <div className="col-span-2 md:col-span-1 z-10">
+      <div className="col-span-2 md:col-span-1 z-10 lg:justify-self-end">
         {accordionData.map((item) => (
           <Accordion
             title={item.title}
