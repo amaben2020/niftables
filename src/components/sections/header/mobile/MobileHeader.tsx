@@ -17,7 +17,7 @@ const MobileHeader = ({
       id="menu"
       onClick={handleIsOpen}
       className={clsx(
-        isOpen ? "flex  animate-openmenu" : "hidden",
+        isOpen ? "flex animate-openmenu" : "hidden",
         "animate-closemenu lg:hidden block",
         styles.drawer,
       )}
@@ -34,22 +34,13 @@ const MobileHeader = ({
           <a href="#" className={clsx(styles.link, "border-custom-main")}>
             Creon Pass
           </a>
-          <a
-            href="#"
-            className="text-white py-4 border-y border-custom-main w-full"
-          >
+          <a href="#" className={clsx(styles.link, "border-custom-main")}>
             Token
           </a>
-          <a
-            href="#"
-            className="text-white py-4 border-y border-custom-main w-full"
-          >
+          <a href="#" className={clsx(styles.link, "border-custom-main")}>
             AI Income
           </a>
-          <a
-            href="#"
-            className="text-white py-4 border-y border-custom-main w-full"
-          >
+          <a href="#" className={clsx(styles.link, "border-custom-main")}>
             AL Launchpad
           </a>
         </div>
