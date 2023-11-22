@@ -4,7 +4,6 @@ import IconComponent from "@/components/elements/icon";
 import CustomLink from "@/components/elements/links";
 import { useOnClickOutside } from "@/hooks/useClickOutside";
 import useMediaQuery from "@/hooks/useMediaQuery";
-import clsx from "clsx";
 import Link from "next/link";
 import { useRef, useState } from "react";
 import MobileHeader from "./mobile/MobileHeader";

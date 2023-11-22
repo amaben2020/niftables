@@ -15,7 +15,6 @@ const MobileHeader = ({
   return (
     <div
       id="menu"
-      onClick={handleIsOpen}
       className={clsx(
         isOpen ? "flex animate-openmenu" : "hidden",
         "animate-closemenu lg:hidden block",
@@ -25,7 +24,7 @@ const MobileHeader = ({
       <div className={styles["drawer-container"]}>
         <div className={styles["drawer-heading"]}>
           <CustomLink variant="outline" text="Connect" to="#" />
-          <Button className={styles.hamburger}>
+          <Button className={styles.hamburger} onClick={handleIsOpen}>
             <IconComponent name="hamburgerClose" />
           </Button>
         </div>
