@@ -4,6 +4,8 @@ import CustomLink from "@/components/elements/links";
 import SocialIcons from "@/components/elements/social-icons";
 import { socialLinks } from "@/components/elements/social-icons/mocks/data";
 import clsx from "clsx";
+import Link from "next/link";
+import { mobileDrawer } from "./mocks/mobileDrawer";
 import styles from "./styles.module.css";
 const MobileHeader = ({
   isOpen,
@@ -29,20 +31,16 @@ const MobileHeader = ({
           </Button>
         </div>
 
-        <div className={styles.links}>
-          <a href="#" className={clsx(styles.link, "border-custom-main")}>
-            Creon Pass
-          </a>
-          <a href="#" className={clsx(styles.link, "border-custom-main")}>
-            Token
-          </a>
-          <a href="#" className={clsx(styles.link, "border-custom-main")}>
-            AI Income
-          </a>
-          <a href="#" className={clsx(styles.link, "border-custom-main")}>
-            AL Launchpad
-          </a>
-        </div>
+        <ul className={styles.links}>
+          {mobileDrawer.map((link) => (
+            <li
+              key={link.title}
+              className={clsx(styles.link, "border-custom-main")}
+            >
+              <Link href={link.url}>{link.title}</Link>
+            </li>
+          ))}
+        </ul>
         <div className={styles.socials}>
           <SocialIcons links={socialLinks} />
         </div>

@@ -9,13 +9,15 @@ export type TSocialLink = {
 
 const SocialIcons = ({ links }: { links: TSocialLink[] }) => {
   return (
-    <span className={styles.wrapper}>
+    <ul className={styles.wrapper}>
       {links.map((link) => (
-        <Link href={link.url} key={link.url}>
-          <IconComponent name={link.name} />
-        </Link>
+        <li key={link.url}>
+          <Link href={link.url}>
+            <IconComponent name={link.name} />
+          </Link>
+        </li>
       ))}
-    </span>
+    </ul>
   );
 };
 
