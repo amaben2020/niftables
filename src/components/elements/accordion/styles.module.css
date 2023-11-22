@@ -27,7 +27,7 @@
   @apply text-base md:text-lg lg:text-[22px] font-bold font-secondary text-left break-words  hover:text-blue-base;
 
   /* box model (from outside in) */
-  @apply ml-8 mr-auto;
+  @apply ml-6 sm:ml-8 mr-auto max-w-[200px] sm:max-w-max;
 }
 
 .chevron {

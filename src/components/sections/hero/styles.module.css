@@ -1,9 +1,9 @@
 .hero {
   /* box model (from outside in) */
-  @apply md:pr-52;
+  @apply md:pr-52 pr-0 sm:pl-0 pl-2;
 }
 
 .content {
   /* box model (from outside in) */
-  @apply w-full md:w-[73%] lg:w-[656px] pt-5 lg:pt-12;
+  @apply w-full sm:w-[85%] md:w-[73%] lg:w-[656px] pt-5 lg:pt-12 sm:pl-0 pl-2;
 }
